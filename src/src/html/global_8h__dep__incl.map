@@ -1,0 +1,18 @@
+<map id="global.h" name="global.h">
+<area shape="rect" id="node1" title="Fichier d&#39;en&#45;tête global contenant les définitions des constantes, des structures et des types utilis..." alt="" coords="424,5,499,32"/>
+<area shape="rect" id="node2" href="$condorcet_8h_source.html" title=" " alt="" coords="680,229,779,256"/>
+<area shape="rect" id="node3" href="$condorcet__paires_8c.html" title="Implémentation de la méthode Condorcet paires pour des élections." alt="" coords="408,304,552,331"/>
+<area shape="rect" id="node4" href="$condorcet__paires_8h_source.html" title=" " alt="" coords="407,229,553,256"/>
+<area shape="rect" id="node5" href="$condorcet__Schulze_8h_source.html" title=" " alt="" coords="119,229,273,256"/>
+<area shape="rect" id="node6" href="$elementliste_8h.html" title="Header file defining operations and types for list elements, specifically for &#39;t_arc_p&#39; type elements..." alt="" coords="219,80,335,107"/>
+<area shape="rect" id="node7" href="$liste_8c.html" title="Fichier source implémentant les fonctions de manipulation d&#39;une liste statique." alt="" coords="304,229,365,256"/>
+<area shape="rect" id="node9" href="$graph_8h.html" title="Définition des structures et des fonctions pour la manipulation de graphes." alt="" coords="621,155,691,181"/>
+<area shape="rect" id="node10" href="$jugementMajoritaire_8h_source.html" title=" " alt="" coords="714,80,881,107"/>
+<area shape="rect" id="node12" href="$lecture__csv_8h_source.html" title=" " alt="" coords="909,80,1016,107"/>
+<area shape="rect" id="node14" href="$matrice_8h.html" title="Fichier d&#39;en&#45;tête contenant les opérations et structures de matrice." alt="" coords="525,80,609,107"/>
+<area shape="rect" id="node15" href="$uninominales_8h_source.html" title=" " alt="" coords="473,155,596,181"/>
+<area shape="rect" id="node16" href="$utils__sd_8h_source.html" title=" " alt="" coords="23,155,107,181"/>
+<area shape="rect" id="node8" href="$liste_8h.html" title="Header file defining operations and structures for handling a static list of &#39;Elementliste&#39; type elem..." alt="" coords="234,155,297,181"/>
+<area shape="rect" id="node11" href="$jugementMajoritaire_8c.html" title="Implémentation de la méthode du Jugement Majoritaire pour des élections." alt="" coords="767,155,934,181"/>
+<area shape="rect" id="node13" href="$lecture__csv_8c.html" title="Fonctions pour lire des données à partir de fichiers CSV et les stocker dans des structures approprié..." alt="" coords="1009,155,1116,181"/>
+</map>

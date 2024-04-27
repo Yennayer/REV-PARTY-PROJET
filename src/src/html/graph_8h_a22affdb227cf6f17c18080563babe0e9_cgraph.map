@@ -1,0 +1,15 @@
+<map id="creer_graphe_de_matrice_char" name="creer_graphe_de_matrice_char">
+<area shape="rect" id="node1" title="Crée un graphe à partir d&#39;une matrice de caractères." alt="" coords="5,119,228,145"/>
+<area shape="rect" id="node2" href="$matrice_8h.html#a7210b158111244ed48bd80e00ad2b83d" title="Construit une matrice duelle à partir d&#39;une matrice de caractères." alt="" coords="310,17,465,44"/>
+<area shape="rect" id="node4" href="$graph_8h.html#a235f19596c034392b0587a95d0481c06" title="Crée un graphe à partir d&#39;une matrice duel." alt="" coords="276,93,499,120"/>
+<area shape="rect" id="node12" href="$matrice_8h.html#a9a1d4a952c08ff26a5f31b23c7f8e38f" title="Récupère les noms des candidats à partir de la matrice de caractères." alt="" coords="331,144,444,171"/>
+<area shape="rect" id="node13" href="$matrice_8h.html#aceb5f95d979ab07345c280f34183bfcb" title="Libère la mémoire d&#39;une matrice dynamique d&#39;entiers." alt="" coords="303,195,472,221"/>
+<area shape="rect" id="node3" href="$matrice_8h.html#a4552123801b134a45e653dcfcb7a3830" title="Vérifie si la matrice de caractères est vide." alt="" coords="547,5,681,32"/>
+<area shape="rect" id="node5" href="$graph_8h.html#abbe6f1232e363c49db0873a419c1726b" title="Crée et renvoie un graphe vide." alt="" coords="565,56,663,83"/>
+<area shape="rect" id="node6" href="$graph_8h.html#a189f711cdb7bb4c1fd231bc3bd86f5cd" title="Initialise les arcs du graphe à partir d&#39;une matrice duel." alt="" coords="579,107,649,133"/>
+<area shape="rect" id="node9" href="$graph_8h.html#aec3488244debc9ab69be208252e023e1" title="Initialise les sommets du graphe à partir d&#39;une liste de noms." alt="" coords="562,157,666,184"/>
+<area shape="rect" id="node7" href="$graph_8h.html#a49fa86d7e9cdf1e752dd15516abe4e6f" title="Ajoute un arc au graphe." alt="" coords="751,56,824,83"/>
+<area shape="rect" id="node8" href="$graph_8h.html#a97b0c59dce819bbedfbbdc44f60bae21" title="Crée et renvoie un arc entre les sommets spécifiés avec le poids spécifié." alt="" coords="746,107,829,133"/>
+<area shape="rect" id="node10" href="$graph_8h.html#a453474b80e7bc5e8767b9173c4c923f1" title="Ajoute un sommet au graphe." alt="" coords="734,157,841,184"/>
+<area shape="rect" id="node11" href="$graph_8h.html#ae8fbd26e4a83cff9e8c417be6c72a7ef" title="Crée et renvoie un sommet avec le nom spécifié." alt="" coords="729,208,845,235"/>
+</map>

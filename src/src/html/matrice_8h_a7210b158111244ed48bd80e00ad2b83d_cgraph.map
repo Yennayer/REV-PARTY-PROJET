@@ -1,0 +1,4 @@
+<map id="construire_mat_duel" name="construire_mat_duel">
+<area shape="rect" id="node1" title="Construit une matrice duelle à partir d&#39;une matrice de caractères." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$matrice_8h.html#a4552123801b134a45e653dcfcb7a3830" title="Vérifie si la matrice de caractères est vide." alt="" coords="208,5,343,32"/>
+</map>

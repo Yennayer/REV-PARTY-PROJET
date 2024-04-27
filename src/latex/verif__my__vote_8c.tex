@@ -1,0 +1,214 @@
+\hypertarget{verif__my__vote_8c}{}\doxysection{verif\+\_\+my\+\_\+vote.\+c File Reference}
+\label{verif__my__vote_8c}\index{verif\_my\_vote.c@{verif\_my\_vote.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Csv/matrice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sha256/sha256.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sha256/sha256\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Csv/lecture\+\_\+csv.\+h\char`\"{}}\newline
+Include dependency graph for verif\+\_\+my\+\_\+vote.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{verif__my__vote_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{verif__my__vote_8c_aede308204703be915dc246c963914dbe}{STRLONG}}~100
+\item 
+\#define \mbox{\hyperlink{verif__my__vote_8c_a392fb874e547e582e9c66a08a1f23326}{MAX}}~1000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{verif__my__vote_8c_a1365bd23b7e85df3e4344b167219260a}{hexa\+To\+Binary}} (char $\ast$hexa)
+\begin{DoxyCompactList}\small\item\em Conversion d\textquotesingle{}une chaine de caractères qui est en héxadécimal en chaine de caractère binaire Cette fonction convertit chaque caractère lu en héxadécimal en binaire \textquotesingle{}\textbackslash{}0\textquotesingle{}. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{verif__my__vote_8c_a8654aa320168a2e1c0cc1ab7f9613503}{hash\+Chaine}} (char $\ast$chaine\+Complete)
+\begin{DoxyCompactList}\small\item\em Cette fonction reçoie le NOM PRENOM+\+CLE et utilise l\textquotesingle{}algorithme SHA256 pour hasher la chaine. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{verif__my__vote_8c_a40706d401457cb4b89d8a08356acfecb}{bon\+Format\+Nom}} (const char $\ast$nom)
+\begin{DoxyCompactList}\small\item\em Cette fontion vérifie si le format du Nom est correct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{verif__my__vote_8c_a3d27c8384c6b3b0fe950ee310b56bea0}{bon\+Format\+Prenom}} (const char $\ast$prenom)
+\begin{DoxyCompactList}\small\item\em Cette fontion vérifie si le format du Prenom est correct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{verif__my__vote_8c_a60a37c8714315d77007f5773c5dcee5c}{check\+Nom}} (char $\ast$nom)
+\begin{DoxyCompactList}\small\item\em Cette fontion demande à l\textquotesingle{}utilisateur de saisir le nom en vérifiant le format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{verif__my__vote_8c_a533d8c9c4d91cdd5f97279d6df935d17}{check\+Prenom}} (char $\ast$prenom)
+\begin{DoxyCompactList}\small\item\em Cette fontion demande à l\textquotesingle{}utilisateur de saisir le prenom en vérifiant le format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{verif__my__vote_8c_a643989de35320d60d632d1b2e2d1db11}{search\+Chaine}} (t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn $\ast$matrice, char $\ast$hash, int $\ast$ligne, int $\ast$colonne)
+\begin{DoxyCompactList}\small\item\em Cette fontion cherche le hash dans la matrice et enregistre la ligne et la colonne du hash s\textquotesingle{}il est trouvé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{verif__my__vote_8c_a703eb9a4872a853a4060d68256accacf}{afficher\+Vote}} (t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn $\ast$matrice, int ligne)
+\begin{DoxyCompactList}\small\item\em Cette fontion affiche le résultat du vote. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{verif__my__vote_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{verif__my__vote_8c_a392fb874e547e582e9c66a08a1f23326}\label{verif__my__vote_8c_a392fb874e547e582e9c66a08a1f23326}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!MAX@{MAX}}
+\index{MAX@{MAX}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define MAX~1000}
+
+\mbox{\Hypertarget{verif__my__vote_8c_aede308204703be915dc246c963914dbe}\label{verif__my__vote_8c_aede308204703be915dc246c963914dbe}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!STRLONG@{STRLONG}}
+\index{STRLONG@{STRLONG}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{STRLONG}{STRLONG}}
+{\footnotesize\ttfamily \#define STRLONG~100}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{verif__my__vote_8c_a703eb9a4872a853a4060d68256accacf}\label{verif__my__vote_8c_a703eb9a4872a853a4060d68256accacf}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!afficherVote@{afficherVote}}
+\index{afficherVote@{afficherVote}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{afficherVote()}{afficherVote()}}
+{\footnotesize\ttfamily void afficher\+Vote (\begin{DoxyParamCaption}\item[{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn $\ast$}]{matrice,  }\item[{int}]{ligne }\end{DoxyParamCaption})}
+
+
+
+Cette fontion affiche le résultat du vote. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice/ligne} & ( ligne = ligne où se trouve le hash ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+affiche le résultat du vote 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a40706d401457cb4b89d8a08356acfecb}\label{verif__my__vote_8c_a40706d401457cb4b89d8a08356acfecb}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!bonFormatNom@{bonFormatNom}}
+\index{bonFormatNom@{bonFormatNom}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{bonFormatNom()}{bonFormatNom()}}
+{\footnotesize\ttfamily int bon\+Format\+Nom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nom }\end{DoxyParamCaption})}
+
+
+
+Cette fontion vérifie si le format du Nom est correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si c\textquotesingle{}est bon, 0 dans le cas contraire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a3d27c8384c6b3b0fe950ee310b56bea0}\label{verif__my__vote_8c_a3d27c8384c6b3b0fe950ee310b56bea0}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!bonFormatPrenom@{bonFormatPrenom}}
+\index{bonFormatPrenom@{bonFormatPrenom}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{bonFormatPrenom()}{bonFormatPrenom()}}
+{\footnotesize\ttfamily int bon\+Format\+Prenom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prenom }\end{DoxyParamCaption})}
+
+
+
+Cette fontion vérifie si le format du Prenom est correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prenom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si c\textquotesingle{}est bon, 0 dans le cas contraire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a60a37c8714315d77007f5773c5dcee5c}\label{verif__my__vote_8c_a60a37c8714315d77007f5773c5dcee5c}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!checkNom@{checkNom}}
+\index{checkNom@{checkNom}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{checkNom()}{checkNom()}}
+{\footnotesize\ttfamily void check\+Nom (\begin{DoxyParamCaption}\item[{char $\ast$}]{nom }\end{DoxyParamCaption})}
+
+
+
+Cette fontion demande à l\textquotesingle{}utilisateur de saisir le nom en vérifiant le format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stocke le nom dans la chaine de caractère passée en paramètres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a533d8c9c4d91cdd5f97279d6df935d17}\label{verif__my__vote_8c_a533d8c9c4d91cdd5f97279d6df935d17}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!checkPrenom@{checkPrenom}}
+\index{checkPrenom@{checkPrenom}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{checkPrenom()}{checkPrenom()}}
+{\footnotesize\ttfamily void check\+Prenom (\begin{DoxyParamCaption}\item[{char $\ast$}]{prenom }\end{DoxyParamCaption})}
+
+
+
+Cette fontion demande à l\textquotesingle{}utilisateur de saisir le prenom en vérifiant le format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prenom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stocke le prenom dans la chaine de caractère passée en paramètres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a8654aa320168a2e1c0cc1ab7f9613503}\label{verif__my__vote_8c_a8654aa320168a2e1c0cc1ab7f9613503}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!hashChaine@{hashChaine}}
+\index{hashChaine@{hashChaine}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{hashChaine()}{hashChaine()}}
+{\footnotesize\ttfamily char$\ast$ hash\+Chaine (\begin{DoxyParamCaption}\item[{char $\ast$}]{chaine\+Complete }\end{DoxyParamCaption})}
+
+
+
+Cette fonction reçoie le NOM PRENOM+\+CLE et utilise l\textquotesingle{}algorithme SHA256 pour hasher la chaine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chaine\+Complete} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le hash de la chaine reçue en paramètres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_a1365bd23b7e85df3e4344b167219260a}\label{verif__my__vote_8c_a1365bd23b7e85df3e4344b167219260a}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!hexaToBinary@{hexaToBinary}}
+\index{hexaToBinary@{hexaToBinary}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{hexaToBinary()}{hexaToBinary()}}
+{\footnotesize\ttfamily char$\ast$ hexa\+To\+Binary (\begin{DoxyParamCaption}\item[{char $\ast$}]{hexa }\end{DoxyParamCaption})}
+
+
+
+Conversion d\textquotesingle{}une chaine de caractères qui est en héxadécimal en chaine de caractère binaire Cette fonction convertit chaque caractère lu en héxadécimal en binaire \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hexa} & chaîne de caractères. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la chaîne de caractères binaire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{verif__my__vote_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{verif__my__vote_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!main@{main}}
+\index{main@{main}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ contiendra la chaîne à hasher\mbox{\Hypertarget{verif__my__vote_8c_a643989de35320d60d632d1b2e2d1db11}\label{verif__my__vote_8c_a643989de35320d60d632d1b2e2d1db11}} 
+\index{verif\_my\_vote.c@{verif\_my\_vote.c}!searchChaine@{searchChaine}}
+\index{searchChaine@{searchChaine}!verif\_my\_vote.c@{verif\_my\_vote.c}}
+\doxysubsubsection{\texorpdfstring{searchChaine()}{searchChaine()}}
+{\footnotesize\ttfamily void search\+Chaine (\begin{DoxyParamCaption}\item[{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn $\ast$}]{matrice,  }\item[{char $\ast$}]{hash,  }\item[{int $\ast$}]{ligne,  }\item[{int $\ast$}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Cette fontion cherche le hash dans la matrice et enregistre la ligne et la colonne du hash s\textquotesingle{}il est trouvé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice/hash/ligne/colonne} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stocke la ligne et la colonne par pointeur 
+\end{DoxyReturn}

@@ -1,0 +1,111 @@
+\hypertarget{jugementMajoritaire_8c}{}\doxysection{jugement\+Majoritaire.\+c File Reference}
+\label{jugementMajoritaire_8c}\index{jugementMajoritaire.c@{jugementMajoritaire.c}}
+
+
+Implémentation de la méthode du Jugement Majoritaire pour des élections.  
+
+
+{\ttfamily \#include \char`\"{}jugement\+Majoritaire.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lecture\+\_\+csv.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for jugement\+Majoritaire.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jugementMajoritaire_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \mbox{\hyperlink{jugementMajoritaire_8c_a1fad7145112a94a900cc0e363494cf2b}{appreciation\+Candidat}} (\mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$votes, int num\+Candidat, int nb\+Votants, FILE $\ast$fptr)
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}appréciation pour un candidat donné. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jugementMajoritaire_8c_a83e7283534421552909a8f159277ae44}{jugement\+Majoritaire}} (\mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$votes, int nb\+Votants, int nb\+Candidat, const char $\ast$fichier\+Log)
+\begin{DoxyCompactList}\small\item\em Effectue le jugement majoritaire pour déterminer le candidat gagnant. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{jugementMajoritaire_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Point d\textquotesingle{}entrée principal du programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{jugementMajoritaire_8c_ad70b57329874bd8087a22e542e65d0e4}\label{jugementMajoritaire_8c_ad70b57329874bd8087a22e542e65d0e4}} 
+const char $\ast$ {\bfseries nom\+Appreciation} \mbox{[}6\mbox{]} = \{\char`\"{}Très Bien\char`\"{} , \char`\"{}Bien\char`\"{} , \char`\"{}Assez Bien\char`\"{} , \char`\"{}Passable\char`\"{}, \char`\"{}Insuffisant\char`\"{},\char`\"{}À Rejeter\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation de la méthode du Jugement Majoritaire pour des élections. 
+
+\begin{DoxyDate}{Date}
+12/12/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jugementMajoritaire_8c_a1fad7145112a94a900cc0e363494cf2b}\label{jugementMajoritaire_8c_a1fad7145112a94a900cc0e363494cf2b}} 
+\index{jugementMajoritaire.c@{jugementMajoritaire.c}!appreciationCandidat@{appreciationCandidat}}
+\index{appreciationCandidat@{appreciationCandidat}!jugementMajoritaire.c@{jugementMajoritaire.c}}
+\doxysubsubsection{\texorpdfstring{appreciationCandidat()}{appreciationCandidat()}}
+{\footnotesize\ttfamily float $\ast$ appreciation\+Candidat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$}]{votes,  }\item[{int}]{num\+Candidat,  }\item[{int}]{nb\+Votants,  }\item[{FILE $\ast$}]{fptr }\end{DoxyParamCaption})}
+
+
+
+Calcule l\textquotesingle{}appréciation pour un candidat donné. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em votes} & Tableau de pointeurs vers les votes des électeurs. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Candidat} & Index du candidat. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Votants} & Nombre total de votants. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em fptr} & Pointeur vers le fichier de log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un tableau contenant l\textquotesingle{}indice de l\textquotesingle{}appréciation la plus élevée et le score correspondant. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jugementMajoritaire_8c_a83e7283534421552909a8f159277ae44}\label{jugementMajoritaire_8c_a83e7283534421552909a8f159277ae44}} 
+\index{jugementMajoritaire.c@{jugementMajoritaire.c}!jugementMajoritaire@{jugementMajoritaire}}
+\index{jugementMajoritaire@{jugementMajoritaire}!jugementMajoritaire.c@{jugementMajoritaire.c}}
+\doxysubsubsection{\texorpdfstring{jugementMajoritaire()}{jugementMajoritaire()}}
+{\footnotesize\ttfamily void jugement\+Majoritaire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$}]{votes,  }\item[{int}]{nb\+Votants,  }\item[{int}]{nb\+Candidat,  }\item[{const char $\ast$}]{fichier\+Log }\end{DoxyParamCaption})}
+
+
+
+Effectue le jugement majoritaire pour déterminer le candidat gagnant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em votes} & Tableau de pointeurs vers les votes des électeurs. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Votants} & Nombre total de votants. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Candidat} & Nombre total de candidats. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fichier\+Log} & Nom du fichier de log pour enregistrer les résultats. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{jugementMajoritaire_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{jugementMajoritaire_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{jugementMajoritaire.c@{jugementMajoritaire.c}!main@{main}}
+\index{main@{main}!jugementMajoritaire.c@{jugementMajoritaire.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Point d\textquotesingle{}entrée principal du programme. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Nombre d\textquotesingle{}arguments de la ligne de commande. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Tableau des arguments de la ligne de commande. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Code de sortie du programme. 
+\end{DoxyReturn}

@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "ctype.h": "c",
+        "global.h": "c",
+        "lecture_csv.h": "c",
+        "utils_sd.h": "c",
+        "sha256.h": "c",
+        "uninominales.h": "c",
+        "matrice.h": "c",
+        "list.h": "c",
+        "stdbool.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "string_view": "c",
+        "condorcet.h": "c"
+    }
+}

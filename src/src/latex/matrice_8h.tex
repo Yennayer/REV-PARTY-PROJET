@@ -1,0 +1,271 @@
+\hypertarget{matrice_8h}{}\doxysection{matrice.\+h File Reference}
+\label{matrice_8h}\index{matrice.h@{matrice.h}}
+
+
+Fichier d\textquotesingle{}en-\/tête contenant les opérations et structures de matrice.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}matrice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+Include dependency graph for matrice.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrice_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrice_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$ \mbox{\hyperlink{matrice_8h_a4de95b9452a7026ef3d0f6d364edeafc}{creer\+\_\+matrice\+\_\+char}} ()
+\begin{DoxyCompactList}\small\item\em Crée une matrice dynamique vide pour les caractères. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrice_8h_a04c79e8f1e1a383c490ba38b97683654}{supprimer\+\_\+matrice\+\_\+char}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire d\textquotesingle{}une matrice dynamique de caractères. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{matrice_8h_a556312ace53bc2717b8770e7db01459d}{get\+\_\+nb\+\_\+colonnes}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de colonnes dans la matrice de caractères. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{matrice_8h_a78a34b7e8c7ba0b08e0693728fb2b145}{get\+\_\+nb\+\_\+lignes}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de lignes dans la matrice de caractères. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{matrice_8h_a4552123801b134a45e653dcfcb7a3830}{est\+\_\+matrice\+\_\+vide}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Vérifie si la matrice de caractères est vide. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \mbox{\hyperlink{matrice_8h_a9a1d4a952c08ff26a5f31b23c7f8e38f}{get\+\_\+candidats}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Récupère les noms des candidats à partir de la matrice de caractères. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrice_8h_a346a275609ff8d923924bc00da1cc0bd}{print\+\_\+matrice\+\_\+char}} (const \mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Affiche la matrice de caractères. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$ \mbox{\hyperlink{matrice_8h_a7210b158111244ed48bd80e00ad2b83d}{construire\+\_\+mat\+\_\+duel}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Construit une matrice duelle à partir d\textquotesingle{}une matrice de caractères. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$ \mbox{\hyperlink{matrice_8h_a6971a3d5f07285a7cd2447f3504b8920}{mat\+\_\+char\+\_\+to\+\_\+mat\+\_\+duel}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Convertit une matrice de caractères en une matrice duelle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{matrice_8h_a00e706ff8f89a0ba80a55f11c27353f9}{score\+Max\+Candidat}} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat\+\_\+duel, int i\+Candidat)
+\begin{DoxyCompactList}\small\item\em Calcule le score maximal d\textquotesingle{}un candidat dans une matrice duel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrice_8h_a8d516d10e7d6e0aac2065afb477e44b5}{print\+\_\+matrice\+\_\+int}} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat\+\_\+duel)
+\begin{DoxyCompactList}\small\item\em Affiche la matrice duelle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrice_8h_aceb5f95d979ab07345c280f34183bfcb}{supprimer\+\_\+matrice\+\_\+int}} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat\+\_\+duel)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire d\textquotesingle{}une matrice dynamique d\textquotesingle{}entiers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{matrice_8h_ae1a945e2a5c39c1306a6ab885f9b753f}\label{matrice_8h_ae1a945e2a5c39c1306a6ab885f9b753f}} 
+void {\bfseries initialiser\+Matrice} (\mbox{\hyperlink{structMatriceDynamique}{Matrice\+Dynamique}} $\ast$matrice\+Dyn, int nb\+Candidats, int nb\+Duels)
+\item 
+\mbox{\Hypertarget{matrice_8h_a027c416054dae8bb0e3b4e03f30480b2}\label{matrice_8h_a027c416054dae8bb0e3b4e03f30480b2}} 
+void {\bfseries liberer\+Matrice} (\mbox{\hyperlink{structMatriceDynamique}{Matrice\+Dynamique}} $\ast$matrice\+Dyn)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier d\textquotesingle{}en-\/tête contenant les opérations et structures de matrice. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{matrice_8h_a7210b158111244ed48bd80e00ad2b83d}\label{matrice_8h_a7210b158111244ed48bd80e00ad2b83d}} 
+\index{matrice.h@{matrice.h}!construire\_mat\_duel@{construire\_mat\_duel}}
+\index{construire\_mat\_duel@{construire\_mat\_duel}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{construire\_mat\_duel()}{construire\_mat\_duel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}}$\ast$ construire\+\_\+mat\+\_\+duel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Construit une matrice duelle à partir d\textquotesingle{}une matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice de caractères en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la matrice duelle construite. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a4de95b9452a7026ef3d0f6d364edeafc}\label{matrice_8h_a4de95b9452a7026ef3d0f6d364edeafc}} 
+\index{matrice.h@{matrice.h}!creer\_matrice\_char@{creer\_matrice\_char}}
+\index{creer\_matrice\_char@{creer\_matrice\_char}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{creer\_matrice\_char()}{creer\_matrice\_char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}}$\ast$ creer\+\_\+matrice\+\_\+char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée une matrice dynamique vide pour les caractères. 
+
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la matrice créée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a4552123801b134a45e653dcfcb7a3830}\label{matrice_8h_a4552123801b134a45e653dcfcb7a3830}} 
+\index{matrice.h@{matrice.h}!est\_matrice\_vide@{est\_matrice\_vide}}
+\index{est\_matrice\_vide@{est\_matrice\_vide}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{est\_matrice\_vide()}{est\_matrice\_vide()}}
+{\footnotesize\ttfamily int est\+\_\+matrice\+\_\+vide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la matrice de caractères est vide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si la matrice est vide, 0 sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a9a1d4a952c08ff26a5f31b23c7f8e38f}\label{matrice_8h_a9a1d4a952c08ff26a5f31b23c7f8e38f}} 
+\index{matrice.h@{matrice.h}!get\_candidats@{get\_candidats}}
+\index{get\_candidats@{get\_candidats}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{get\_candidats()}{get\_candidats()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+candidats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Récupère les noms des candidats à partir de la matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un tableau de noms de candidats. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a556312ace53bc2717b8770e7db01459d}\label{matrice_8h_a556312ace53bc2717b8770e7db01459d}} 
+\index{matrice.h@{matrice.h}!get\_nb\_colonnes@{get\_nb\_colonnes}}
+\index{get\_nb\_colonnes@{get\_nb\_colonnes}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{get\_nb\_colonnes()}{get\_nb\_colonnes()}}
+{\footnotesize\ttfamily int get\+\_\+nb\+\_\+colonnes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Retourne le nombre de colonnes dans la matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre de colonnes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a78a34b7e8c7ba0b08e0693728fb2b145}\label{matrice_8h_a78a34b7e8c7ba0b08e0693728fb2b145}} 
+\index{matrice.h@{matrice.h}!get\_nb\_lignes@{get\_nb\_lignes}}
+\index{get\_nb\_lignes@{get\_nb\_lignes}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{get\_nb\_lignes()}{get\_nb\_lignes()}}
+{\footnotesize\ttfamily int get\+\_\+nb\+\_\+lignes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Retourne le nombre de lignes dans la matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre de lignes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a6971a3d5f07285a7cd2447f3504b8920}\label{matrice_8h_a6971a3d5f07285a7cd2447f3504b8920}} 
+\index{matrice.h@{matrice.h}!mat\_char\_to\_mat\_duel@{mat\_char\_to\_mat\_duel}}
+\index{mat\_char\_to\_mat\_duel@{mat\_char\_to\_mat\_duel}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{mat\_char\_to\_mat\_duel()}{mat\_char\_to\_mat\_duel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}}$\ast$ mat\+\_\+char\+\_\+to\+\_\+mat\+\_\+duel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Convertit une matrice de caractères en une matrice duelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice de caractères en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la matrice duelle convertie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a346a275609ff8d923924bc00da1cc0bd}\label{matrice_8h_a346a275609ff8d923924bc00da1cc0bd}} 
+\index{matrice.h@{matrice.h}!print\_matrice\_char@{print\_matrice\_char}}
+\index{print\_matrice\_char@{print\_matrice\_char}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{print\_matrice\_char()}{print\_matrice\_char()}}
+{\footnotesize\ttfamily void print\+\_\+matrice\+\_\+char (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Affiche la matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice en entrée. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{matrice_8h_a8d516d10e7d6e0aac2065afb477e44b5}\label{matrice_8h_a8d516d10e7d6e0aac2065afb477e44b5}} 
+\index{matrice.h@{matrice.h}!print\_matrice\_int@{print\_matrice\_int}}
+\index{print\_matrice\_int@{print\_matrice\_int}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{print\_matrice\_int()}{print\_matrice\_int()}}
+{\footnotesize\ttfamily void print\+\_\+matrice\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat\+\_\+duel }\end{DoxyParamCaption})}
+
+
+
+Affiche la matrice duelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+duel} & La matrice duelle en entrée. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{matrice_8h_a00e706ff8f89a0ba80a55f11c27353f9}\label{matrice_8h_a00e706ff8f89a0ba80a55f11c27353f9}} 
+\index{matrice.h@{matrice.h}!scoreMaxCandidat@{scoreMaxCandidat}}
+\index{scoreMaxCandidat@{scoreMaxCandidat}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{scoreMaxCandidat()}{scoreMaxCandidat()}}
+{\footnotesize\ttfamily int score\+Max\+Candidat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat\+\_\+duel,  }\item[{int}]{i\+Candidat }\end{DoxyParamCaption})}
+
+
+
+Calcule le score maximal d\textquotesingle{}un candidat dans une matrice duel. 
+
+La fonction parcourt la colonne spécifiée pour trouver le score maximal d\textquotesingle{}un candidat, en ignorant la ligne correspondante au candidat lui-\/même.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+duel} & La matrice duel. \\
+\hline
+{\em i\+Candidat} & L\textquotesingle{}indice du candidat pour lequel calculer le score maximal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le score maximal du candidat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrice_8h_a04c79e8f1e1a383c490ba38b97683654}\label{matrice_8h_a04c79e8f1e1a383c490ba38b97683654}} 
+\index{matrice.h@{matrice.h}!supprimer\_matrice\_char@{supprimer\_matrice\_char}}
+\index{supprimer\_matrice\_char@{supprimer\_matrice\_char}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{supprimer\_matrice\_char()}{supprimer\_matrice\_char()}}
+{\footnotesize\ttfamily void supprimer\+\_\+matrice\+\_\+char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Libère la mémoire d\textquotesingle{}une matrice dynamique de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & La matrice à libérer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{matrice_8h_aceb5f95d979ab07345c280f34183bfcb}\label{matrice_8h_aceb5f95d979ab07345c280f34183bfcb}} 
+\index{matrice.h@{matrice.h}!supprimer\_matrice\_int@{supprimer\_matrice\_int}}
+\index{supprimer\_matrice\_int@{supprimer\_matrice\_int}!matrice.h@{matrice.h}}
+\doxysubsubsection{\texorpdfstring{supprimer\_matrice\_int()}{supprimer\_matrice\_int()}}
+{\footnotesize\ttfamily void supprimer\+\_\+matrice\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat\+\_\+duel }\end{DoxyParamCaption})}
+
+
+
+Libère la mémoire d\textquotesingle{}une matrice dynamique d\textquotesingle{}entiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+duel} & La matrice à libérer. \\
+\hline
+\end{DoxyParams}

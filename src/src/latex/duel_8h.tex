@@ -1,0 +1,708 @@
+\hypertarget{duel_8h}{}\doxysection{duel.\+h File Reference}
+\label{duel_8h}\index{duel.h@{duel.h}}
+
+
+Structure Duel header.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+Include dependency graph for duel.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{duel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{duel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{duel_8h_a1683cf20cb6e91b381579ff93b309714}{DEFAULT\+\_\+\+VALUE}}~-\/2
+\begin{DoxyCompactList}\small\item\em valeur par défaut d\textquotesingle{}une case \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct s\+\_\+duel \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}}
+\begin{DoxyCompactList}\small\item\em Définition opaque de la structure Duel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{duel_8h_a2d7239d9b6f2608346e92b014d85bd27}\label{duel_8h_a2d7239d9b6f2608346e92b014d85bd27}} 
+typedef \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$ {\bfseries ptr\+Duel}
+\item 
+typedef struct s\+\_\+duel\+Ite \mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}}
+\begin{DoxyCompactList}\small\item\em Définition opaque de la structure Duel\+Ite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{duel_8h_a06d768758243f489f115ccb6a15e16f1}\label{duel_8h_a06d768758243f489f115ccb6a15e16f1}} 
+typedef struct s\+\_\+duel\+Ite $\ast$ {\bfseries ptr\+Duel\+Ite}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}{fun\+\_\+ite\+\_\+\+Duel}}) (int v, unsigned int l, unsigned int c, void $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Définie le type des fonctions prise en paramêtre de l\textquotesingle{}itérateur. \end{DoxyCompactList}\item 
+typedef bool($\ast$ \mbox{\hyperlink{duel_8h_a3af313c96d54abfb4b35ea517317afe9}{fun\+\_\+filter}}) (int v, int l, int c)
+\begin{DoxyCompactList}\small\item\em Définie le type des fonctions prise en paramêtre du filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$ \mbox{\hyperlink{duel_8h_a3e130ba16f63a0b69912f687c34f26c8}{create\+Duel}} (unsigned int nbl, unsigned int nbc)
+\begin{DoxyCompactList}\small\item\em Crée une matrice de duels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{duel_8h_a5c374871419ca68191ba243bf3b0f0aa}{delete\+Duel}} (ptr\+Duel $\ast$d)
+\begin{DoxyCompactList}\small\item\em Supprime la matrice de duels et ses données en libérant la mémoire. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$ \mbox{\hyperlink{duel_8h_a98ed16f786c136317e0f12b7f31843bc}{duel\+Set\+Value}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, unsigned int l, unsigned int c, int v)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément dans la matrice de duels à la position (l,c), l\textquotesingle{}élément ne pourra plus être modifié \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_ae3b462b36b81df9a4e127a5dc3545faf}{duel\+Get}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, unsigned int l, unsigned int c)
+\begin{DoxyCompactList}\small\item\em Renvoie la valeur à la position (l,c) dans la matrice de duel. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{duel_8h_a99d201dd400833bd05b4bc477778ef5a}{duel\+Shape}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Renvoie les dimension de la matrice de duels sous la forme d\textquotesingle{}un couple (nb\+\_\+lignes, nb\+\_\+colonnes) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_aece6b66ccbd18426a64484ad15b65ad0}{duel\+Set\+Label}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, unsigned int ind, char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Met une étiquette à la colonne et à la ligne d\textquotesingle{}indice ind. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_a593a13990b655d582f43741e24faa3d0}{duel\+Get\+Column}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Renvoie le numéro de la colonne associée à l\textquotesingle{}étiquette. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_ab59a397d0fc772ce9c453f18954f1e77}{duel\+Get\+Line}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Renvoie le numéro de la ligne associée à l\textquotesingle{}étiquette. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_af2329f2ef8c330794be414fe9302b9f1}{duel\+Get\+VS}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, char $\ast$label1, char $\ast$label2)
+\begin{DoxyCompactList}\small\item\em Renvoie la valeur associée au duel label1 vs label2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$ \mbox{\hyperlink{duel_8h_a5d6217bea5e6a914777a3d8a8ef55c3a}{create\+Duel\+Ite}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, int l, int c, \mbox{\hyperlink{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}{fun\+\_\+ite\+\_\+\+Duel}} fun, void $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Crée un itérateur sur la matrice de duels passé en entrée et le positionne avant le premier élément. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{duel_8h_a9f02b50d501b65fd05b4dc128d7e9e5e}{duel\+Ite\+Has\+Next}} (\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$ite)
+\begin{DoxyCompactList}\small\item\em Renvoie vrai si il reste des éléments à parcourir. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_a1247bd3c8d87684209e08fc389e12de2}{duel\+Ite\+Next}} (\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$ite)
+\begin{DoxyCompactList}\small\item\em Décale l\textquotesingle{}itérateur sur le prochain élément, renvoie sa valeur et réalise le traitement de fun sans modification de la matrice de duels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_a75549976f43a5d9d0e15bd18765c56e8}{duel\+Ite\+Get\+Value}} (\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$ite)
+\begin{DoxyCompactList}\small\item\em Renvoie la valeur courrante. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{duel_8h_a9c88334cea28c45a76f2bf21f9b85b20}{delete\+Duel\+Ite}} (ptr\+Duel\+Ite $\ast$ite)
+\begin{DoxyCompactList}\small\item\em Supprime l\textquotesingle{}itérateur et libère la mémoire. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_aa29e20c4e96626cc97ca52a7ec35884f}{duel\+Map}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, int l, int c, \mbox{\hyperlink{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}{fun\+\_\+ite\+\_\+\+Duel}} fun, void $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Applique la fonction fun à tous les éléments spécifiés de la matrice de duels sans les modifier. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_a0f6fb8673eb5eef1cde577f4c1a2b836}{duel\+Som}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, int l, int c)
+\begin{DoxyCompactList}\small\item\em Renvoie la somme des élément positifs de la matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{duel_8h_ac6cbfe70f3a34e4738bdc8132a89617d}{duel\+Max}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, int l, int c)
+\begin{DoxyCompactList}\small\item\em Renvoie la plus grande valeur de la matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{duel_8h_ab197f16592704e5ad668241175055857}{duel\+Min}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, int l, int c)
+\begin{DoxyCompactList}\small\item\em Renvoie la plus petite valeur du matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$ \mbox{\hyperlink{duel_8h_ae93ce0aeda1b46d5c527520367765c8e}{duel\+Filter}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d, \mbox{\hyperlink{duel_8h_a3af313c96d54abfb4b35ea517317afe9}{fun\+\_\+filter}} fun)
+\begin{DoxyCompactList}\small\item\em Filtre la matrice de duels et renvoie une copie de la matrice de duels avec uniquement les éléments tel que fun(elem) = true. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{duel_8h_a55014a03fb2a4f2d9ba8f67d7305459a}{duel\+Copy}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$duel\+\_\+src, \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$duel\+\_\+dest)
+\begin{DoxyCompactList}\small\item\em Copie une matrice de duels source vers une matrice de duels destination de même taille. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{duel_8h_a35e7bf52a28db978a39752f71b68e25f}{display\+Duel}} (\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Afficher la matrice de duels dans la sortie standard stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure Duel header. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+/$\ast$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{duel_8h_a1683cf20cb6e91b381579ff93b309714}\label{duel_8h_a1683cf20cb6e91b381579ff93b309714}} 
+\index{duel.h@{duel.h}!DEFAULT\_VALUE@{DEFAULT\_VALUE}}
+\index{DEFAULT\_VALUE@{DEFAULT\_VALUE}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_VALUE}{DEFAULT\_VALUE}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+VALUE~-\/2}
+
+
+
+valeur par défaut d\textquotesingle{}une case 
+
+\begin{DoxyNote}{Note}
+ne doit pas faire partie de l\textquotesingle{}ensemble des valeurs possibles des éléments stockés 
+\end{DoxyNote}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}\label{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}} 
+\index{duel.h@{duel.h}!Duel@{Duel}}
+\index{Duel@{Duel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{Duel}{Duel}}
+{\footnotesize\ttfamily typedef struct s\+\_\+duel \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}}}
+
+
+
+Définition opaque de la structure Duel. 
+
+\begin{DoxyDate}{Date}
+22/11/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}\label{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}} 
+\index{duel.h@{duel.h}!DuelIte@{DuelIte}}
+\index{DuelIte@{DuelIte}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{DuelIte}{DuelIte}}
+{\footnotesize\ttfamily typedef struct s\+\_\+duel\+Ite \mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}}}
+
+
+
+Définition opaque de la structure Duel\+Ite. 
+
+\begin{DoxyDate}{Date}
+22/11/2023 
+\end{DoxyDate}
+\mbox{\Hypertarget{duel_8h_a3af313c96d54abfb4b35ea517317afe9}\label{duel_8h_a3af313c96d54abfb4b35ea517317afe9}} 
+\index{duel.h@{duel.h}!fun\_filter@{fun\_filter}}
+\index{fun\_filter@{fun\_filter}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{fun\_filter}{fun\_filter}}
+{\footnotesize\ttfamily typedef bool($\ast$ fun\+\_\+filter) (int v, int l, int c)}
+
+
+
+Définie le type des fonctions prise en paramêtre du filter. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Valeur de la case courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}élément est conservé, sinon false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}\label{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}} 
+\index{duel.h@{duel.h}!fun\_ite\_Duel@{fun\_ite\_Duel}}
+\index{fun\_ite\_Duel@{fun\_ite\_Duel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{fun\_ite\_Duel}{fun\_ite\_Duel}}
+{\footnotesize\ttfamily typedef void($\ast$ fun\+\_\+ite\+\_\+\+Duel) (int v, unsigned int l, unsigned int c, void $\ast$buff)}
+
+
+
+Définie le type des fonctions prise en paramêtre de l\textquotesingle{}itérateur. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Valeur de la case courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em buff} & pointeur vers un buffer pouvant stocker un résultat \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{duel_8h_a3e130ba16f63a0b69912f687c34f26c8}\label{duel_8h_a3e130ba16f63a0b69912f687c34f26c8}} 
+\index{duel.h@{duel.h}!createDuel@{createDuel}}
+\index{createDuel@{createDuel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{createDuel()}{createDuel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}}$\ast$ create\+Duel (\begin{DoxyParamCaption}\item[{unsigned int}]{nbl,  }\item[{unsigned int}]{nbc }\end{DoxyParamCaption})}
+
+
+
+Crée une matrice de duels. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nbl} & Nombre de lignes de données (hors étiquettes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em nbc} & Nombre de colonnes de données (hors étiquettes)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointeur vers la matrice de duels, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a5d6217bea5e6a914777a3d8a8ef55c3a}\label{duel_8h_a5d6217bea5e6a914777a3d8a8ef55c3a}} 
+\index{duel.h@{duel.h}!createDuelIte@{createDuelIte}}
+\index{createDuelIte@{createDuelIte}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{createDuelIte()}{createDuelIte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}}$\ast$ create\+Duel\+Ite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{int}]{l,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}{fun\+\_\+ite\+\_\+\+Duel}}}]{fun,  }\item[{void $\ast$}]{buff }\end{DoxyParamCaption})}
+
+
+
+Crée un itérateur sur la matrice de duels passé en entrée et le positionne avant le premier élément. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à parcourir \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne à parcourir (-\/1 pour parcourir toutes les lignes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne à parcourir (-\/1 pour parcourir toutes les colonnes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em fun} & Fonction à appliquer à chaque élément sans modification de la matrice de duels, si NULL aucun traitement n\textquotesingle{}est effectué et l\textquotesingle{}itérateur ne renvoie que la valeur courante \\
+\hline
+\mbox{\texttt{ in}}  & {\em buff} & pointeur vers le buffer fourni à fun\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}itérateur, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a5c374871419ca68191ba243bf3b0f0aa}\label{duel_8h_a5c374871419ca68191ba243bf3b0f0aa}} 
+\index{duel.h@{duel.h}!deleteDuel@{deleteDuel}}
+\index{deleteDuel@{deleteDuel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{deleteDuel()}{deleteDuel()}}
+{\footnotesize\ttfamily void delete\+Duel (\begin{DoxyParamCaption}\item[{ptr\+Duel $\ast$}]{d }\end{DoxyParamCaption})}
+
+
+
+Supprime la matrice de duels et ses données en libérant la mémoire. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & pointeur vers la matrice de duels à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{duel_8h_a9c88334cea28c45a76f2bf21f9b85b20}\label{duel_8h_a9c88334cea28c45a76f2bf21f9b85b20}} 
+\index{duel.h@{duel.h}!deleteDuelIte@{deleteDuelIte}}
+\index{deleteDuelIte@{deleteDuelIte}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{deleteDuelIte()}{deleteDuelIte()}}
+{\footnotesize\ttfamily void delete\+Duel\+Ite (\begin{DoxyParamCaption}\item[{ptr\+Duel\+Ite $\ast$}]{ite }\end{DoxyParamCaption})}
+
+
+
+Supprime l\textquotesingle{}itérateur et libère la mémoire. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ite} & pointeur vers l\textquotesingle{}itérateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{duel_8h_a35e7bf52a28db978a39752f71b68e25f}\label{duel_8h_a35e7bf52a28db978a39752f71b68e25f}} 
+\index{duel.h@{duel.h}!displayDuel@{displayDuel}}
+\index{displayDuel@{displayDuel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{displayDuel()}{displayDuel()}}
+{\footnotesize\ttfamily void display\+Duel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+
+
+Afficher la matrice de duels dans la sortie standard stdout. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & matrice de duels à afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{duel_8h_a55014a03fb2a4f2d9ba8f67d7305459a}\label{duel_8h_a55014a03fb2a4f2d9ba8f67d7305459a}} 
+\index{duel.h@{duel.h}!duelCopy@{duelCopy}}
+\index{duelCopy@{duelCopy}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelCopy()}{duelCopy()}}
+{\footnotesize\ttfamily int duel\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{duel\+\_\+src,  }\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{duel\+\_\+dest }\end{DoxyParamCaption})}
+
+
+
+Copie une matrice de duels source vers une matrice de duels destination de même taille. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em duel\+\_\+src} & Pointeur vers la matrice de duels source (à copier) \\
+\hline
+\mbox{\texttt{ in}}  & {\em duel\+\_\+dest} & Pointeur vers la matrice de duels de destination (copie) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 si erreur , 0 sinon 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+\+: (l\+\_\+src, c\+\_\+src) $<$= (l\+\_\+dest,c\+\_\+dest) 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{duel_8h_ae93ce0aeda1b46d5c527520367765c8e}\label{duel_8h_ae93ce0aeda1b46d5c527520367765c8e}} 
+\index{duel.h@{duel.h}!duelFilter@{duelFilter}}
+\index{duelFilter@{duelFilter}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelFilter()}{duelFilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}}$\ast$ duel\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{\mbox{\hyperlink{duel_8h_a3af313c96d54abfb4b35ea517317afe9}{fun\+\_\+filter}}}]{fun }\end{DoxyParamCaption})}
+
+
+
+Filtre la matrice de duels et renvoie une copie de la matrice de duels avec uniquement les éléments tel que fun(elem) = true. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Pointeur vers la matrice de duel \\
+\hline
+{\em fun} & Fonction de filtrage de type fun\+\_\+filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers la copie filtrée, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_ae3b462b36b81df9a4e127a5dc3545faf}\label{duel_8h_ae3b462b36b81df9a4e127a5dc3545faf}} 
+\index{duel.h@{duel.h}!duelGet@{duelGet}}
+\index{duelGet@{duelGet}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelGet()}{duelGet()}}
+{\footnotesize\ttfamily int duel\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{unsigned int}]{l,  }\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Renvoie la valeur à la position (l,c) dans la matrice de duel. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à lire \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne de la valeur \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne de la valeur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+l $<$ nb\+\_\+ligne \&\& c $<$ nb\+\_\+colonnes
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+la valeur en position (l, c), -\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a593a13990b655d582f43741e24faa3d0}\label{duel_8h_a593a13990b655d582f43741e24faa3d0}} 
+\index{duel.h@{duel.h}!duelGetColumn@{duelGetColumn}}
+\index{duelGetColumn@{duelGetColumn}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelGetColumn()}{duelGetColumn()}}
+{\footnotesize\ttfamily int duel\+Get\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{char $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Renvoie le numéro de la colonne associée à l\textquotesingle{}étiquette. 
+
+= \begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à utiliser \\
+\hline
+\mbox{\texttt{ in}}  & {\em label} & Etiquette de la colonne recherchée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+numéro de la colonne, -\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_ab59a397d0fc772ce9c453f18954f1e77}\label{duel_8h_ab59a397d0fc772ce9c453f18954f1e77}} 
+\index{duel.h@{duel.h}!duelGetLine@{duelGetLine}}
+\index{duelGetLine@{duelGetLine}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelGetLine()}{duelGetLine()}}
+{\footnotesize\ttfamily int duel\+Get\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{char $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Renvoie le numéro de la ligne associée à l\textquotesingle{}étiquette. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à utiliser \\
+\hline
+\mbox{\texttt{ in}}  & {\em label} & Etiquette de la ligne recherchée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+numéro de la ligne,-\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_af2329f2ef8c330794be414fe9302b9f1}\label{duel_8h_af2329f2ef8c330794be414fe9302b9f1}} 
+\index{duel.h@{duel.h}!duelGetVS@{duelGetVS}}
+\index{duelGetVS@{duelGetVS}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelGetVS()}{duelGetVS()}}
+{\footnotesize\ttfamily int duel\+Get\+VS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{char $\ast$}]{label1,  }\item[{char $\ast$}]{label2 }\end{DoxyParamCaption})}
+
+
+
+Renvoie la valeur associée au duel label1 vs label2. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à lire \\
+\hline
+\mbox{\texttt{ in}}  & {\em label1} & nom du premier candidat \\
+\hline
+\mbox{\texttt{ in}}  & {\em label2} & nom du deuxème candidat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+label1 et label2 sont des candidats valides
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+la valeur en position (l, c), -\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a75549976f43a5d9d0e15bd18765c56e8}\label{duel_8h_a75549976f43a5d9d0e15bd18765c56e8}} 
+\index{duel.h@{duel.h}!duelIteGetValue@{duelIteGetValue}}
+\index{duelIteGetValue@{duelIteGetValue}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelIteGetValue()}{duelIteGetValue()}}
+{\footnotesize\ttfamily int duel\+Ite\+Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$}]{ite }\end{DoxyParamCaption})}
+
+
+
+Renvoie la valeur courrante. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ite} & Itérateur à utiliser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+ite != init\+Duel\+Ite(ite)
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément de courant, -\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a9f02b50d501b65fd05b4dc128d7e9e5e}\label{duel_8h_a9f02b50d501b65fd05b4dc128d7e9e5e}} 
+\index{duel.h@{duel.h}!duelIteHasNext@{duelIteHasNext}}
+\index{duelIteHasNext@{duelIteHasNext}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelIteHasNext()}{duelIteHasNext()}}
+{\footnotesize\ttfamily bool duel\+Ite\+Has\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$}]{ite }\end{DoxyParamCaption})}
+
+
+
+Renvoie vrai si il reste des éléments à parcourir. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ite} & Itérateur questionné\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si il reste des éléments, sinon false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a1247bd3c8d87684209e08fc389e12de2}\label{duel_8h_a1247bd3c8d87684209e08fc389e12de2}} 
+\index{duel.h@{duel.h}!duelIteNext@{duelIteNext}}
+\index{duelIteNext@{duelIteNext}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelIteNext()}{duelIteNext()}}
+{\footnotesize\ttfamily int duel\+Ite\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_afba3e3c9e63ce12dbc8510eeb7cce970}{Duel\+Ite}} $\ast$}]{ite }\end{DoxyParamCaption})}
+
+
+
+Décale l\textquotesingle{}itérateur sur le prochain élément, renvoie sa valeur et réalise le traitement de fun sans modification de la matrice de duels. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ite} & Itérateur à utiliser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Duel\+Ite\+Has\+Next(ite) == true
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Valeur courante, -\/1 si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_aa29e20c4e96626cc97ca52a7ec35884f}\label{duel_8h_aa29e20c4e96626cc97ca52a7ec35884f}} 
+\index{duel.h@{duel.h}!duelMap@{duelMap}}
+\index{duelMap@{duelMap}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelMap()}{duelMap()}}
+{\footnotesize\ttfamily int duel\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{int}]{l,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{duel_8h_a6cb549d32f3bab45bf763bf1061462a2}{fun\+\_\+ite\+\_\+\+Duel}}}]{fun,  }\item[{void $\ast$}]{buff }\end{DoxyParamCaption})}
+
+
+
+Applique la fonction fun à tous les éléments spécifiés de la matrice de duels sans les modifier. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à parcourir \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne à parcourir (-\/1 pour parcourir toutes les lignes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne à parcourir (-\/1 pour parcourir toutes les colonnes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em fun} & Fonction à appliquer à chaque élément, si NULL aucun traitement n\textquotesingle{}est effectué \\
+\hline
+\mbox{\texttt{ in}}  & {\em buff} & pointeur vers le buffer fourni à fun\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 si erreur , 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_ac6cbfe70f3a34e4738bdc8132a89617d}\label{duel_8h_ac6cbfe70f3a34e4738bdc8132a89617d}} 
+\index{duel.h@{duel.h}!duelMax@{duelMax}}
+\index{duelMax@{duelMax}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelMax()}{duelMax()}}
+{\footnotesize\ttfamily int$\ast$ duel\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{int}]{l,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Renvoie la plus grande valeur de la matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Pointeur vers la matrice de duel \\
+\hline
+{\em l} & Ligne cible (-\/1 pour toutes les lignes) \\
+\hline
+{\em c} & Colonne cible (-\/1 pour toutes les colonnes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tableau d\textquotesingle{}entiers de taille 3 contenant \mbox{[}valeur\+\_\+max, ligne, colonne\mbox{]}, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_ab197f16592704e5ad668241175055857}\label{duel_8h_ab197f16592704e5ad668241175055857}} 
+\index{duel.h@{duel.h}!duelMin@{duelMin}}
+\index{duelMin@{duelMin}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelMin()}{duelMin()}}
+{\footnotesize\ttfamily int$\ast$ duel\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{int}]{l,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Renvoie la plus petite valeur du matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Pointeur vers la matrice de duel \\
+\hline
+{\em l} & Ligne cible (-\/1 pour toutes les lignes) \\
+\hline
+{\em c} & Colonne cible (-\/1 pour toutes les colonnes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tableau d\textquotesingle{}entiers de taille 3 contenant \mbox{[}valeur\+\_\+min, ligne, colonne\mbox{]}, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_aece6b66ccbd18426a64484ad15b65ad0}\label{duel_8h_aece6b66ccbd18426a64484ad15b65ad0}} 
+\index{duel.h@{duel.h}!duelSetLabel@{duelSetLabel}}
+\index{duelSetLabel@{duelSetLabel}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelSetLabel()}{duelSetLabel()}}
+{\footnotesize\ttfamily int duel\+Set\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{unsigned int}]{ind,  }\item[{char $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Met une étiquette à la colonne et à la ligne d\textquotesingle{}indice ind. 
+
+\begin{DoxyDate}{Date}
+22/11/2023 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Par défaut l\textquotesingle{}étiquette vaut NULL
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à modifier \\
+\hline
+\mbox{\texttt{ in}}  & {\em ind} & Indice de la colonne / ligne \\
+\hline
+\mbox{\texttt{ in}}  & {\em label} & Etiquette \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+c $<$ nb\+\_\+colonnes
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+-\/1 si erreur, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a98ed16f786c136317e0f12b7f31843bc}\label{duel_8h_a98ed16f786c136317e0f12b7f31843bc}} 
+\index{duel.h@{duel.h}!duelSetValue@{duelSetValue}}
+\index{duelSetValue@{duelSetValue}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelSetValue()}{duelSetValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}}$\ast$ duel\+Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{unsigned int}]{l,  }\item[{unsigned int}]{c,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Ajoute un élément dans la matrice de duels à la position (l,c), l\textquotesingle{}élément ne pourra plus être modifié 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Matrice de duels à remplir \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne de destination \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne de destination \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & valeur à ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+l $<$ nb\+\_\+ligne \&\& c $<$ nb\+\_\+colonnes /!\textbackslash{} UTF-\/8 chars?
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Adresse de la matrice de duels, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a99d201dd400833bd05b4bc477778ef5a}\label{duel_8h_a99d201dd400833bd05b4bc477778ef5a}} 
+\index{duel.h@{duel.h}!duelShape@{duelShape}}
+\index{duelShape@{duelShape}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelShape()}{duelShape()}}
+{\footnotesize\ttfamily unsigned int$\ast$ duel\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+
+
+Renvoie les dimension de la matrice de duels sous la forme d\textquotesingle{}un couple (nb\+\_\+lignes, nb\+\_\+colonnes) 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & matrice de duels à utiliser\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tableau d\textquotesingle{}entier de taille 2 \+: \mbox{[}nombre\+\_\+lignes, nombre\+\_\+colonnes\mbox{]}, NULL si erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{duel_8h_a0f6fb8673eb5eef1cde577f4c1a2b836}\label{duel_8h_a0f6fb8673eb5eef1cde577f4c1a2b836}} 
+\index{duel.h@{duel.h}!duelSom@{duelSom}}
+\index{duelSom@{duelSom}!duel.h@{duel.h}}
+\doxysubsubsection{\texorpdfstring{duelSom()}{duelSom()}}
+{\footnotesize\ttfamily int duel\+Som (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{duel_8h_a06bcfaa04e17d6c76ed85bf958357c0a}{Duel}} $\ast$}]{d,  }\item[{int}]{l,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Renvoie la somme des élément positifs de la matrice de duels, d\textquotesingle{}une ligne ou d\textquotesingle{}une colonne. 
+
+\begin{DoxyDate}{Date}
+22/11/2023
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Pointeur vers la matrice de duel \\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Ligne cible (-\/1 pour toutes les lignes) \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Colonne cible (-\/1 pour toutes les colonnes)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+somme des éléments positifs, -\/1 si erreur 
+\end{DoxyReturn}

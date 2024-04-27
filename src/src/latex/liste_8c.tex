@@ -1,0 +1,253 @@
+\hypertarget{liste_8c}{}\doxysection{liste.\+c File Reference}
+\label{liste_8c}\index{liste.c@{liste.c}}
+
+
+Fichier source implémentant les fonctions de manipulation d\textquotesingle{}une liste statique.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}elementliste.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}liste.\+h\char`\"{}}\newline
+Include dependency graph for liste.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{liste_8c_a5c4d14a21c2e305ed6c4110d63561e76}{create\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise une liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{liste_8c_aa06cfcafd95438aeebfd731dbbffd9a0}{nb\+Elt\+List}} (\mbox{\hyperlink{structliste}{liste}} lst)
+\begin{DoxyCompactList}\small\item\em Renvoie le nombre d\textquotesingle{}éléments dans une liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_ab362f8b1c683c374542de1c37d5a3748}{add\+Front\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} e)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément au début de la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_ae44fac1e392193e620781404f18d119e}{add\+Tail\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} e)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément à la fin de la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_aedd2f92afd4787bee1b7898be436c0f7}{del\+Tail\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Supprime l\textquotesingle{}élément de fin de la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_a36245e8afb6334fcbbc3fc0254356a5f}{del\+Front\+List}} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Supprime l\textquotesingle{}élément en tête de la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_a654f9e13ded641af8eabeca39fe88513}{head\+List}} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Récupère l\textquotesingle{}élément de tête de la liste sans le supprimer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_a952b7b53e6a0bf83ed77b30f56039cd3}{tail\+List}} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Récupère l\textquotesingle{}élément de fin de la liste sans le supprimer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{liste_8c_aca4cf493ed4e3277629db742a21d4d98}{empty\+List}} (\mbox{\hyperlink{structliste}{liste}} p)
+\begin{DoxyCompactList}\small\item\em Vérifie si la liste est vide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{liste_8c_a3e9debc4df97b3cea0ee38e37a1f9c62}{full\+List}} (\mbox{\hyperlink{structliste}{liste}} p)
+\begin{DoxyCompactList}\small\item\em Vérifie si la liste est pleine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{liste_8c_a1efa21bcdfc9f7008f5055d45660ec0a}{dump\+List}} (\mbox{\hyperlink{structliste}{liste}} p, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Affiche le contenu de la liste. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{liste_8c_aab2683342bb0aca5e45f6990a33301ac}\label{liste_8c_aab2683342bb0aca5e45f6990a33301ac}} 
+void {\bfseries swap\+Elt\+List} (\mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$a, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$b)
+\item 
+\mbox{\Hypertarget{liste_8c_a24de5e6ed5544ca17f1c9036852dad5a}\label{liste_8c_a24de5e6ed5544ca17f1c9036852dad5a}} 
+void {\bfseries bubble\+Sort\+List} (\mbox{\hyperlink{structliste}{liste}} $\ast$p)
+\item 
+\mbox{\Hypertarget{liste_8c_ab925256fc1775b71a5986418101f09f3}\label{liste_8c_ab925256fc1775b71a5986418101f09f3}} 
+void {\bfseries pick\+Elt\+List} (\mbox{\hyperlink{structliste}{liste}} l, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$e, int index)
+\item 
+\mbox{\Hypertarget{liste_8c_a2d730599f1058e59d270c4acb0a90e43}\label{liste_8c_a2d730599f1058e59d270c4acb0a90e43}} 
+bool {\bfseries belong\+Elt\+List} (\mbox{\hyperlink{structliste}{liste}} p, \mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier source implémentant les fonctions de manipulation d\textquotesingle{}une liste statique. 
+
+\begin{DoxyDate}{Date}
+12/11/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{liste_8c_ab362f8b1c683c374542de1c37d5a3748}\label{liste_8c_ab362f8b1c683c374542de1c37d5a3748}} 
+\index{liste.c@{liste.c}!addFrontList@{addFrontList}}
+\index{addFrontList@{addFrontList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{addFrontList()}{addFrontList()}}
+{\footnotesize\ttfamily void add\+Front\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Ajoute un élément au début de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur vers la liste. \\
+\hline
+{\em e} & Élément à ajouter.\\
+\hline
+\end{DoxyParams}
+Cette fonction ajoute un élément au début de la liste. Si la liste est pleine, elle affiche une erreur et quitte le programme. \mbox{\Hypertarget{liste_8c_ae44fac1e392193e620781404f18d119e}\label{liste_8c_ae44fac1e392193e620781404f18d119e}} 
+\index{liste.c@{liste.c}!addTailList@{addTailList}}
+\index{addTailList@{addTailList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{addTailList()}{addTailList()}}
+{\footnotesize\ttfamily void add\+Tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Ajoute un élément à la fin de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur vers la liste. \\
+\hline
+{\em e} & Élément à ajouter.\\
+\hline
+\end{DoxyParams}
+Cette fonction ajoute un élément à la fin de la liste. Si la liste est pleine, elle affiche une erreur et quitte le programme. \mbox{\Hypertarget{liste_8c_a5c4d14a21c2e305ed6c4110d63561e76}\label{liste_8c_a5c4d14a21c2e305ed6c4110d63561e76}} 
+\index{liste.c@{liste.c}!createList@{createList}}
+\index{createList@{createList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{createList()}{createList()}}
+{\footnotesize\ttfamily void create\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Initialise une liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur vers la liste à initialiser.\\
+\hline
+\end{DoxyParams}
+Cette fonction initialise une liste en mettant la tête de liste à 0 et le nombre d\textquotesingle{}éléments à 0. Elle prépare la liste à être utilisée pour d\textquotesingle{}autres opérations. \mbox{\Hypertarget{liste_8c_a36245e8afb6334fcbbc3fc0254356a5f}\label{liste_8c_a36245e8afb6334fcbbc3fc0254356a5f}} 
+\index{liste.c@{liste.c}!delFrontList@{delFrontList}}
+\index{delFrontList@{delFrontList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{delFrontList()}{delFrontList()}}
+{\footnotesize\ttfamily void del\+Front\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Supprime l\textquotesingle{}élément en tête de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur vers la liste.\\
+\hline
+\end{DoxyParams}
+Supprime l\textquotesingle{}élément de tête de la liste en décrémentant le nombre d\textquotesingle{}éléments. Si la liste est vide, affiche une erreur et quitte le programme. \mbox{\Hypertarget{liste_8c_aedd2f92afd4787bee1b7898be436c0f7}\label{liste_8c_aedd2f92afd4787bee1b7898be436c0f7}} 
+\index{liste.c@{liste.c}!delTailList@{delTailList}}
+\index{delTailList@{delTailList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{delTailList()}{delTailList()}}
+{\footnotesize\ttfamily void del\+Tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Supprime l\textquotesingle{}élément de fin de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur vers la liste.\\
+\hline
+\end{DoxyParams}
+Cette fonction supprime l\textquotesingle{}élément de fin de la liste. Si la liste est vide, elle affiche une erreur et quitte le programme. \mbox{\Hypertarget{liste_8c_a1efa21bcdfc9f7008f5055d45660ec0a}\label{liste_8c_a1efa21bcdfc9f7008f5055d45660ec0a}} 
+\index{liste.c@{liste.c}!dumpList@{dumpList}}
+\index{dumpList@{dumpList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{dumpList()}{dumpList()}}
+{\footnotesize\ttfamily void dump\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Affiche le contenu de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Liste à afficher. \\
+\hline
+{\em fp} & Pointeur vers un fichier où afficher le contenu de la liste.\\
+\hline
+\end{DoxyParams}
+Affiche chaque élément de la liste dans le fichier spécifié. \mbox{\Hypertarget{liste_8c_aca4cf493ed4e3277629db742a21d4d98}\label{liste_8c_aca4cf493ed4e3277629db742a21d4d98}} 
+\index{liste.c@{liste.c}!emptyList@{emptyList}}
+\index{emptyList@{emptyList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{emptyList()}{emptyList()}}
+{\footnotesize\ttfamily bool empty\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la liste est vide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Liste à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la liste est vide, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8c_a3e9debc4df97b3cea0ee38e37a1f9c62}\label{liste_8c_a3e9debc4df97b3cea0ee38e37a1f9c62}} 
+\index{liste.c@{liste.c}!fullList@{fullList}}
+\index{fullList@{fullList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{fullList()}{fullList()}}
+{\footnotesize\ttfamily bool full\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la liste est pleine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Liste à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la liste est pleine, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8c_a654f9e13ded641af8eabeca39fe88513}\label{liste_8c_a654f9e13ded641af8eabeca39fe88513}} 
+\index{liste.c@{liste.c}!headList@{headList}}
+\index{headList@{headList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{headList()}{headList()}}
+{\footnotesize\ttfamily void head\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Récupère l\textquotesingle{}élément de tête de la liste sans le supprimer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Liste à partir de laquelle récupérer l\textquotesingle{}élément. \\
+\hline
+{\em e} & Pointeur vers l\textquotesingle{}élément récupéré.\\
+\hline
+\end{DoxyParams}
+Si la liste est vide, affiche une erreur et quitte le programme. \mbox{\Hypertarget{liste_8c_aa06cfcafd95438aeebfd731dbbffd9a0}\label{liste_8c_aa06cfcafd95438aeebfd731dbbffd9a0}} 
+\index{liste.c@{liste.c}!nbEltList@{nbEltList}}
+\index{nbEltList@{nbEltList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{nbEltList()}{nbEltList()}}
+{\footnotesize\ttfamily int nb\+Elt\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{lst }\end{DoxyParamCaption})}
+
+
+
+Renvoie le nombre d\textquotesingle{}éléments dans une liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lst} & La liste dont on veut connaître le nombre d\textquotesingle{}éléments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre d\textquotesingle{}éléments dans la liste. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{liste_8c_a952b7b53e6a0bf83ed77b30f56039cd3}\label{liste_8c_a952b7b53e6a0bf83ed77b30f56039cd3}} 
+\index{liste.c@{liste.c}!tailList@{tailList}}
+\index{tailList@{tailList}!liste.c@{liste.c}}
+\doxysubsubsection{\texorpdfstring{tailList()}{tailList()}}
+{\footnotesize\ttfamily void tail\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste}{liste}}}]{p,  }\item[{\mbox{\hyperlink{elementliste_8h_a709ed6c17a201a6746b5cedfb8781d93}{Elementliste}} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Récupère l\textquotesingle{}élément de fin de la liste sans le supprimer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Liste à partir de laquelle récupérer l\textquotesingle{}élément. \\
+\hline
+{\em e} & Pointeur vers l\textquotesingle{}élément récupéré.\\
+\hline
+\end{DoxyParams}
+Si la liste est vide, affiche une erreur et quitte le programme. 

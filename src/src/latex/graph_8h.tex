@@ -1,0 +1,460 @@
+\hypertarget{graph_8h}{}\doxysection{graph.\+h File Reference}
+\label{graph_8h}\index{graph.h@{graph.h}}
+
+
+Définition des structures et des fonctions pour la manipulation de graphes.  
+
+
+{\ttfamily \#include \char`\"{}matrice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+Include dependency graph for graph.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graph_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graph_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsommet}{sommet}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un sommet dans le graphe. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structarc}{arc}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un arc dans le graphe. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structgraph}{graph}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un graphe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{graph_8h_a44b9cced540ad1abff7a19fe565c9a43}\label{graph_8h_a44b9cced540ad1abff7a19fe565c9a43}} 
+typedef struct \mbox{\hyperlink{structsommet}{sommet}} {\bfseries sommet}
+\item 
+\mbox{\Hypertarget{graph_8h_ab1cf70ddf9a2feb7b697bb030824ea87}\label{graph_8h_ab1cf70ddf9a2feb7b697bb030824ea87}} 
+typedef struct \mbox{\hyperlink{structarc}{arc}} {\bfseries arc}
+\item 
+\mbox{\Hypertarget{graph_8h_a2d64ff113ccd23a7d7828aff59a1a797}\label{graph_8h_a2d64ff113ccd23a7d7828aff59a1a797}} 
+typedef struct \mbox{\hyperlink{structgraph}{graph}} {\bfseries graph}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsommet}{sommet}} $\ast$ \mbox{\hyperlink{graph_8h_ae8fbd26e4a83cff9e8c417be6c72a7ef}{creer\+\_\+sommet}} (char $\ast$nom)
+\begin{DoxyCompactList}\small\item\em Crée et renvoie un sommet avec le nom spécifié. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarc}{arc}} $\ast$ \mbox{\hyperlink{graph_8h_a97b0c59dce819bbedfbbdc44f60bae21}{creer\+\_\+arc}} (\mbox{\hyperlink{structsommet}{sommet}} $\ast$arrivee, \mbox{\hyperlink{structsommet}{sommet}} $\ast$depart, int poids)
+\begin{DoxyCompactList}\small\item\em Crée et renvoie un arc entre les sommets spécifiés avec le poids spécifié. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgraph}{graph}} $\ast$ \mbox{\hyperlink{graph_8h_abbe6f1232e363c49db0873a419c1726b}{creer\+\_\+graph}} ()
+\begin{DoxyCompactList}\small\item\em Crée et renvoie un graphe vide. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_a453474b80e7bc5e8767b9173c4c923f1}{add\+\_\+sommet}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe, \mbox{\hyperlink{structsommet}{sommet}} $\ast$somm)
+\begin{DoxyCompactList}\small\item\em Ajoute un sommet au graphe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_a49fa86d7e9cdf1e752dd15516abe4e6f}{add\+\_\+arc}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe, \mbox{\hyperlink{structarc}{arc}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Ajoute un arc au graphe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarc}{arc}} $\ast$ \mbox{\hyperlink{graph_8h_afac0260b27fc5ea7fbf9572b65f82155}{get\+\_\+arc\+\_\+min}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe)
+\begin{DoxyCompactList}\small\item\em Recherche et renvoie l\textquotesingle{}arc avec le poids minimum dans le graphe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_aec3488244debc9ab69be208252e023e1}{init\+\_\+sommet}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe, char $\ast$liste\+Nom\+Sommets\mbox{[}$\,$\mbox{]}, int nb\+Candidats)
+\begin{DoxyCompactList}\small\item\em Initialise les sommets du graphe à partir d\textquotesingle{}une liste de noms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_a189f711cdb7bb4c1fd231bc3bd86f5cd}{init\+\_\+arc}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe, \mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat\+\_\+duel)
+\begin{DoxyCompactList}\small\item\em Initialise les arcs du graphe à partir d\textquotesingle{}une matrice duel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgraph}{graph}} $\ast$ \mbox{\hyperlink{graph_8h_a235f19596c034392b0587a95d0481c06}{creer\+\_\+graphe\+\_\+de\+\_\+matrice\+\_\+duel}} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat\+\_\+duel, char $\ast$$\ast$liste\+Nom\+Sommets)
+\begin{DoxyCompactList}\small\item\em Crée un graphe à partir d\textquotesingle{}une matrice duel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgraph}{graph}} $\ast$ \mbox{\hyperlink{graph_8h_a22affdb227cf6f17c18080563babe0e9}{creer\+\_\+graphe\+\_\+de\+\_\+matrice\+\_\+char}} (\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$mat)
+\begin{DoxyCompactList}\small\item\em Crée un graphe à partir d\textquotesingle{}une matrice de caractères. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_acd0ad9fb5be55a032132a0ba460107dc}{afficher\+\_\+graph}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe)
+\begin{DoxyCompactList}\small\item\em Affiche le contenu du graphe (sommets et arcs). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graph_8h_ac135b2d2d4fd14dba195b17a02ba0e3c}{enlever\+\_\+arc}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe, \mbox{\hyperlink{structarc}{arc}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Enlève un arc du graphe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8h_a4a46a38faac5f38f2350951b9d7a7c5d}{liberer\+\_\+graph}} (\mbox{\hyperlink{structgraph}{graph}} $\ast$graphe)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire allouée pour le graphe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Définition des structures et des fonctions pour la manipulation de graphes. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graph_8h_a49fa86d7e9cdf1e752dd15516abe4e6f}\label{graph_8h_a49fa86d7e9cdf1e752dd15516abe4e6f}} 
+\index{graph.h@{graph.h}!add\_arc@{add\_arc}}
+\index{add\_arc@{add\_arc}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{add\_arc()}{add\_arc()}}
+{\footnotesize\ttfamily int add\+\_\+arc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe,  }\item[{\mbox{\hyperlink{structarc}{arc}} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Ajoute un arc au graphe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe auquel ajouter l\textquotesingle{}arc. \\
+\hline
+{\em a} & L\textquotesingle{}arc à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre total d\textquotesingle{}arcs après l\textquotesingle{}ajout.
+\end{DoxyReturn}
+Ajoute un arc au graphe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+{\em a} & Pointeur vers l\textquotesingle{}arc à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouveau nombre d\textquotesingle{}arcs dans le graphe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_a453474b80e7bc5e8767b9173c4c923f1}\label{graph_8h_a453474b80e7bc5e8767b9173c4c923f1}} 
+\index{graph.h@{graph.h}!add\_sommet@{add\_sommet}}
+\index{add\_sommet@{add\_sommet}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{add\_sommet()}{add\_sommet()}}
+{\footnotesize\ttfamily int add\+\_\+sommet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe,  }\item[{\mbox{\hyperlink{structsommet}{sommet}} $\ast$}]{somm }\end{DoxyParamCaption})}
+
+
+
+Ajoute un sommet au graphe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe auquel ajouter le sommet. \\
+\hline
+{\em somm} & Le sommet à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre total de sommets après l\textquotesingle{}ajout.
+\end{DoxyReturn}
+Ajoute un sommet au graphe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+{\em somm} & Pointeur vers le sommet à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouveau nombre de sommets dans le graphe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_acd0ad9fb5be55a032132a0ba460107dc}\label{graph_8h_acd0ad9fb5be55a032132a0ba460107dc}} 
+\index{graph.h@{graph.h}!afficher\_graph@{afficher\_graph}}
+\index{afficher\_graph@{afficher\_graph}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_graph()}{afficher\_graph()}}
+{\footnotesize\ttfamily void afficher\+\_\+graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe }\end{DoxyParamCaption})}
+
+
+
+Affiche le contenu du graphe (sommets et arcs). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe à afficher.\\
+\hline
+\end{DoxyParams}
+Affiche le contenu du graphe (sommets et arcs).
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe à afficher. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graph_8h_a97b0c59dce819bbedfbbdc44f60bae21}\label{graph_8h_a97b0c59dce819bbedfbbdc44f60bae21}} 
+\index{graph.h@{graph.h}!creer\_arc@{creer\_arc}}
+\index{creer\_arc@{creer\_arc}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{creer\_arc()}{creer\_arc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarc}{arc}}$\ast$ creer\+\_\+arc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsommet}{sommet}} $\ast$}]{arrivee,  }\item[{\mbox{\hyperlink{structsommet}{sommet}} $\ast$}]{depart,  }\item[{int}]{poids }\end{DoxyParamCaption})}
+
+
+
+Crée et renvoie un arc entre les sommets spécifiés avec le poids spécifié. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arrivee} & Sommet d\textquotesingle{}arrivée. \\
+\hline
+{\em depart} & Sommet de départ. \\
+\hline
+{\em poids} & Poids de l\textquotesingle{}arc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers l\textquotesingle{}arc créé.
+\end{DoxyReturn}
+Crée et renvoie un arc entre les sommets spécifiés avec le poids spécifié.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arrivee} & Pointeur vers le sommet d\textquotesingle{}arrivée. \\
+\hline
+{\em depart} & Pointeur vers le sommet de départ. \\
+\hline
+{\em poids} & Poids de l\textquotesingle{}arc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}arc créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_abbe6f1232e363c49db0873a419c1726b}\label{graph_8h_abbe6f1232e363c49db0873a419c1726b}} 
+\index{graph.h@{graph.h}!creer\_graph@{creer\_graph}}
+\index{creer\_graph@{creer\_graph}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{creer\_graph()}{creer\_graph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgraph}{graph}}$\ast$ creer\+\_\+graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée et renvoie un graphe vide. 
+
+\begin{DoxyReturn}{Returns}
+Un pointeur vers le graphe créé.
+\end{DoxyReturn}
+Crée et renvoie un graphe vide.
+
+\begin{DoxyReturn}{Returns}
+Pointeur vers le graphe créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_a22affdb227cf6f17c18080563babe0e9}\label{graph_8h_a22affdb227cf6f17c18080563babe0e9}} 
+\index{graph.h@{graph.h}!creer\_graphe\_de\_matrice\_char@{creer\_graphe\_de\_matrice\_char}}
+\index{creer\_graphe\_de\_matrice\_char@{creer\_graphe\_de\_matrice\_char}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{creer\_graphe\_de\_matrice\_char()}{creer\_graphe\_de\_matrice\_char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgraph}{graph}}$\ast$ creer\+\_\+graphe\+\_\+de\+\_\+matrice\+\_\+char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{mat }\end{DoxyParamCaption})}
+
+
+
+Crée un graphe à partir d\textquotesingle{}une matrice de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & La matrice de caractères. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers le graphe créé.
+\end{DoxyReturn}
+Crée un graphe à partir d\textquotesingle{}une matrice de caractères.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & Pointeur vers la matrice de chaînes de caractères. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers le graphe créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_a235f19596c034392b0587a95d0481c06}\label{graph_8h_a235f19596c034392b0587a95d0481c06}} 
+\index{graph.h@{graph.h}!creer\_graphe\_de\_matrice\_duel@{creer\_graphe\_de\_matrice\_duel}}
+\index{creer\_graphe\_de\_matrice\_duel@{creer\_graphe\_de\_matrice\_duel}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{creer\_graphe\_de\_matrice\_duel()}{creer\_graphe\_de\_matrice\_duel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgraph}{graph}}$\ast$ creer\+\_\+graphe\+\_\+de\+\_\+matrice\+\_\+duel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat\+\_\+duel,  }\item[{char $\ast$$\ast$}]{liste\+Nom\+Sommets }\end{DoxyParamCaption})}
+
+
+
+Crée un graphe à partir d\textquotesingle{}une matrice duel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+duel} & La matrice duel. \\
+\hline
+{\em liste\+Nom\+Sommets} & Liste des noms des sommets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers le graphe créé.
+\end{DoxyReturn}
+Crée un graphe à partir d\textquotesingle{}une matrice duel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+duel} & Pointeur vers la matrice de duels. \\
+\hline
+{\em liste\+Nom\+Sommets} & Tableau de chaînes contenant les noms des sommets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers le graphe créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_ae8fbd26e4a83cff9e8c417be6c72a7ef}\label{graph_8h_ae8fbd26e4a83cff9e8c417be6c72a7ef}} 
+\index{graph.h@{graph.h}!creer\_sommet@{creer\_sommet}}
+\index{creer\_sommet@{creer\_sommet}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{creer\_sommet()}{creer\_sommet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsommet}{sommet}}$\ast$ creer\+\_\+sommet (\begin{DoxyParamCaption}\item[{char $\ast$}]{nom }\end{DoxyParamCaption})}
+
+
+
+Crée et renvoie un sommet avec le nom spécifié. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Le nom du sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers le sommet créé.
+\end{DoxyReturn}
+Crée et renvoie un sommet avec le nom spécifié.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom du nouveau sommet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers le sommet créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_ac135b2d2d4fd14dba195b17a02ba0e3c}\label{graph_8h_ac135b2d2d4fd14dba195b17a02ba0e3c}} 
+\index{graph.h@{graph.h}!enlever\_arc@{enlever\_arc}}
+\index{enlever\_arc@{enlever\_arc}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{enlever\_arc()}{enlever\_arc()}}
+{\footnotesize\ttfamily int enlever\+\_\+arc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe,  }\item[{\mbox{\hyperlink{structarc}{arc}} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Enlève un arc du graphe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Graphe duquel enlever l\textquotesingle{}arc. \\
+\hline
+{\em a} & Arc à enlever. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre total d\textquotesingle{}arcs dans le graphe après l\textquotesingle{}enlèvement.
+\end{DoxyReturn}
+Enlève un arc du graphe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+{\em a} & Pointeur vers l\textquotesingle{}arc à enlever. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouveau nombre d\textquotesingle{}arcs dans le graphe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_afac0260b27fc5ea7fbf9572b65f82155}\label{graph_8h_afac0260b27fc5ea7fbf9572b65f82155}} 
+\index{graph.h@{graph.h}!get\_arc\_min@{get\_arc\_min}}
+\index{get\_arc\_min@{get\_arc\_min}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{get\_arc\_min()}{get\_arc\_min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarc}{arc}}$\ast$ get\+\_\+arc\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe }\end{DoxyParamCaption})}
+
+
+
+Recherche et renvoie l\textquotesingle{}arc avec le poids minimum dans le graphe. 
+
+Renvoie l\textquotesingle{}arc content le poids minimal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe à analyser. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers l\textquotesingle{}arc avec le poids minimum. Si le graphe est vide, renvoie NULL.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & le graphe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}arc
+\end{DoxyReturn}
+Recherche et renvoie l\textquotesingle{}arc avec le poids minimum dans le graphe.
+
+Renvoie l\textquotesingle{}arc content le poids minimal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}arc avec le poids minimum, NULL si aucun arc.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & le graphe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}arc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8h_a189f711cdb7bb4c1fd231bc3bd86f5cd}\label{graph_8h_a189f711cdb7bb4c1fd231bc3bd86f5cd}} 
+\index{graph.h@{graph.h}!init\_arc@{init\_arc}}
+\index{init\_arc@{init\_arc}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{init\_arc()}{init\_arc()}}
+{\footnotesize\ttfamily void init\+\_\+arc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe,  }\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat\+\_\+duel }\end{DoxyParamCaption})}
+
+
+
+Initialise les arcs du graphe à partir d\textquotesingle{}une matrice duel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe à initialiser. \\
+\hline
+{\em mat\+\_\+duel} & La matrice duel.\\
+\hline
+\end{DoxyParams}
+Initialise les arcs du graphe à partir d\textquotesingle{}une matrice duel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+{\em mat\+\_\+duel} & Pointeur vers la matrice de duels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graph_8h_aec3488244debc9ab69be208252e023e1}\label{graph_8h_aec3488244debc9ab69be208252e023e1}} 
+\index{graph.h@{graph.h}!init\_sommet@{init\_sommet}}
+\index{init\_sommet@{init\_sommet}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{init\_sommet()}{init\_sommet()}}
+{\footnotesize\ttfamily void init\+\_\+sommet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe,  }\item[{char $\ast$}]{liste\+Nom\+Sommets\mbox{[}$\,$\mbox{]},  }\item[{int}]{nb\+Candidats }\end{DoxyParamCaption})}
+
+
+
+Initialise les sommets du graphe à partir d\textquotesingle{}une liste de noms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Le graphe à initialiser. \\
+\hline
+{\em liste\+Nom\+Sommets} & Liste des noms des sommets. \\
+\hline
+{\em nb\+Candidats} & Nombre de sommets.\\
+\hline
+\end{DoxyParams}
+Initialise les sommets du graphe à partir d\textquotesingle{}une liste de noms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Pointeur vers le graphe. \\
+\hline
+{\em liste\+Nom\+Sommets} & Tableau de chaînes contenant les noms des sommets. \\
+\hline
+{\em nb\+Candidats} & Nombre de sommets à initialiser. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graph_8h_a4a46a38faac5f38f2350951b9d7a7c5d}\label{graph_8h_a4a46a38faac5f38f2350951b9d7a7c5d}} 
+\index{graph.h@{graph.h}!liberer\_graph@{liberer\_graph}}
+\index{liberer\_graph@{liberer\_graph}!graph.h@{graph.h}}
+\doxysubsubsection{\texorpdfstring{liberer\_graph()}{liberer\_graph()}}
+{\footnotesize\ttfamily void liberer\+\_\+graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph}{graph}} $\ast$}]{graphe }\end{DoxyParamCaption})}
+
+
+
+Libère la mémoire allouée pour le graphe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphe} & Graphe à libérer. \\
+\hline
+\end{DoxyParams}

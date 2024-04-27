@@ -1,0 +1,4 @@
+<map id="get_candidats" name="get_candidats">
+<area shape="rect" id="node1" title="Récupère les noms des candidats à partir de la matrice de caractères." alt="" coords="276,5,389,32"/>
+<area shape="rect" id="node2" href="$graph_8h.html#a22affdb227cf6f17c18080563babe0e9" title="Crée un graphe à partir d&#39;une matrice de caractères." alt="" coords="5,5,228,32"/>
+</map>

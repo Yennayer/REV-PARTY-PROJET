@@ -1,0 +1,153 @@
+\hypertarget{condorcet__paires_8c}{}\doxysection{condorcet\+\_\+paires.\+c File Reference}
+\label{condorcet__paires_8c}\index{condorcet\_paires.c@{condorcet\_paires.c}}
+
+
+Implémentation de la méthode Condorcet paires pour des élections.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}condorcet\+\_\+paires.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils\+\_\+sd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}condorcet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph.\+h\char`\"{}}\newline
+Include dependency graph for condorcet\+\_\+paires.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{condorcet__paires_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{condorcet__paires_8c_a6e0678d3b489466172c959c0ed3751e1}{find\+Cycle}} (\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$debutarc, \mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$vers, int taille\+\_\+debutarc, int taille\+\_\+vers, \mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} arc\+Courant)
+\begin{DoxyCompactList}\small\item\em Détecte la présence d\textquotesingle{}un cycle dans un graphe dirigé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{condorcet__paires_8c_a33d663069e1d89396ef3cd345801e536}{elimination\+Cycle}} (\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$tarc, \mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$tarc\+\_\+reduit, int $\ast$compteur, int taille\+\_\+tarc)
+\begin{DoxyCompactList}\small\item\em Élimine les cycles dans un graphe de duels pour créer un graphe acyclique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{condorcet__paires_8c_a57725773838fa483e697f4ca40599fd7}\label{condorcet__paires_8c_a57725773838fa483e697f4ca40599fd7}} 
+int {\bfseries condorcet\+\_\+paires} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$matrice\+\_\+duels, FILE $\ast$log)
+\item 
+void \mbox{\hyperlink{condorcet__paires_8c_af156e080794591cea545b6947147a2b3}{liberer\+\_\+memoire\+\_\+s3}} (\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$mat)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire allouée à une matrice dynamique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{condorcet__paires_8c_a70a2e008ad14990fbe0b103e9d695ea7}{prog}} (char $\ast$filename, FILE $\ast$log, int option)
+\begin{DoxyCompactList}\small\item\em Programme principal pour l\textquotesingle{}exécution de la méthode Condorcet et Condorcet paires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation de la méthode Condorcet paires pour des élections. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{condorcet__paires_8c_a33d663069e1d89396ef3cd345801e536}\label{condorcet__paires_8c_a33d663069e1d89396ef3cd345801e536}} 
+\index{condorcet\_paires.c@{condorcet\_paires.c}!eliminationCycle@{eliminationCycle}}
+\index{eliminationCycle@{eliminationCycle}!condorcet\_paires.c@{condorcet\_paires.c}}
+\doxysubsubsection{\texorpdfstring{eliminationCycle()}{eliminationCycle()}}
+{\footnotesize\ttfamily void elimination\+Cycle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$}]{tarc,  }\item[{\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$}]{tarc\+\_\+reduit,  }\item[{int $\ast$}]{compteur,  }\item[{int}]{taille\+\_\+tarc }\end{DoxyParamCaption})}
+
+
+
+Élimine les cycles dans un graphe de duels pour créer un graphe acyclique. 
+
+élimination des arcs qui forment engendrent des cycles dans le tableau (\textquotesingle{}graphe\textquotesingle{})
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tarc} & Tableau des arcs initiaux du graphe. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tarc\+\_\+reduit} & Tableau des arcs du graphe après élimination des cycles. \\
+\hline
+\mbox{\texttt{ out}}  & {\em compteur} & Pointeur vers le compteur des arcs dans le graphe réduit. \\
+\hline
+\mbox{\texttt{ in}}  & {\em taille\+\_\+tarc} & Taille du tableau des arcs initiaux.\\
+\hline
+\end{DoxyParams}
+Cette fonction parcourt les arcs du graphe et élimine ceux qui créent des cycles, permettant la création d\textquotesingle{}un graphe acyclique représentatif des duels entre candidats.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}}} & $\ast$tarc -\/$>$ tableau contenant les arcs des résultant des duels vainqueurs classé par ordre décroissant \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em \mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}}} & $\ast$tarc\+\_\+reduit -\/$>$ tableau qui contiendra tous les arcs qui ne créent pas de cycle dans le \textquotesingle{}graphe\textquotesingle{} \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em int} & $\ast$ compteur -\/$>$ permettra de sauvegarder le nombre d\textquotesingle{}arcs qui seront contenu dans tarc\+\_\+reduit (sera donc utilisable dans la suite du programme) \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & taille\+\_\+tarc \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{condorcet__paires_8c_a6e0678d3b489466172c959c0ed3751e1}\label{condorcet__paires_8c_a6e0678d3b489466172c959c0ed3751e1}} 
+\index{condorcet\_paires.c@{condorcet\_paires.c}!findCycle@{findCycle}}
+\index{findCycle@{findCycle}!condorcet\_paires.c@{condorcet\_paires.c}}
+\doxysubsubsection{\texorpdfstring{findCycle()}{findCycle()}}
+{\footnotesize\ttfamily bool find\+Cycle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$}]{debutarc,  }\item[{\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}} $\ast$}]{vers,  }\item[{int}]{taille\+\_\+debutarc,  }\item[{int}]{taille\+\_\+vers,  }\item[{\mbox{\hyperlink{structt__arc__p}{t\+\_\+arc\+\_\+p}}}]{arc\+Courant }\end{DoxyParamCaption})}
+
+
+
+Détecte la présence d\textquotesingle{}un cycle dans un graphe dirigé. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em debutarc} & Tableau d\textquotesingle{}arcs représentant le début du parcours. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vers} & Tableau d\textquotesingle{}arcs représentant la fin du parcours. \\
+\hline
+\mbox{\texttt{ in}}  & {\em taille\+\_\+debutarc} & Taille du tableau debutarc. \\
+\hline
+\mbox{\texttt{ in}}  & {\em taille\+\_\+vers} & Taille du tableau vers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em arc\+Courant} & L\textquotesingle{}arc actuellement examiné. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai (true) s\textquotesingle{}il y a un cycle, faux (false) sinon.
+\end{DoxyReturn}
+Cette fonction vérifie la présence d\textquotesingle{}un cycle dans un graphe en parcourant deux tableaux d\textquotesingle{}arcs. Elle est utilisée pour identifier des cycles dans le cadre de l\textquotesingle{}application de la méthode Condorcet par paires. \mbox{\Hypertarget{condorcet__paires_8c_af156e080794591cea545b6947147a2b3}\label{condorcet__paires_8c_af156e080794591cea545b6947147a2b3}} 
+\index{condorcet\_paires.c@{condorcet\_paires.c}!liberer\_memoire\_s3@{liberer\_memoire\_s3}}
+\index{liberer\_memoire\_s3@{liberer\_memoire\_s3}!condorcet\_paires.c@{condorcet\_paires.c}}
+\doxysubsubsection{\texorpdfstring{liberer\_memoire\_s3()}{liberer\_memoire\_s3()}}
+{\footnotesize\ttfamily void liberer\+\_\+memoire\+\_\+s3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structs__mat__dyn}{t\+\_\+mat\+\_\+int\+\_\+dyn}} $\ast$}]{mat }\end{DoxyParamCaption})}
+
+
+
+Libère la mémoire allouée à une matrice dynamique. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em mat} & Pointeur vers la matrice dynamique à libérer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{condorcet__paires_8c_a70a2e008ad14990fbe0b103e9d695ea7}\label{condorcet__paires_8c_a70a2e008ad14990fbe0b103e9d695ea7}} 
+\index{condorcet\_paires.c@{condorcet\_paires.c}!prog@{prog}}
+\index{prog@{prog}!condorcet\_paires.c@{condorcet\_paires.c}}
+\doxysubsubsection{\texorpdfstring{prog()}{prog()}}
+{\footnotesize\ttfamily void prog (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{FILE $\ast$}]{log,  }\item[{int}]{option }\end{DoxyParamCaption})}
+
+
+
+Programme principal pour l\textquotesingle{}exécution de la méthode Condorcet et Condorcet paires. 
+
+fonction qui fait office de main. Elle traite le fichier csv, le converti, fait des affichages et test la version Condorcet normale avant d\textquotesingle{}appeler condorcet\+\_\+pair si nécessaire
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Nom du fichier CSV contenant les bulletins de vote ou les duels. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em log} & Fichier pour la journalisation des résultats. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & Option de traitement pour la matrice des duels.\\
+\hline
+\end{DoxyParams}
+Cette fonction gère la lecture des données, le traitement selon la méthode Condorcet
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char$\ast$filename} & -\/$>$ correspond au fichier csv passé en paramètre lors de l\textquotesingle{}exécution du programme \\
+\hline
+\mbox{\texttt{ in}}  & {\em FILE} & $\ast$ log -\/$>$ correspond au fichier log qui permettra a l\textquotesingle{}utilisateur de suivre le déroulement de l\textquotesingle{}éxecution du programme \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & option -\/$>$ précise le type de fichier qui est passé en paramètre 1 si c\textquotesingle{}est une matrice de duels ou 2 si c\textquotesingle{}est un ballot de votes \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,96 @@
+\hypertarget{lecture__csv_8c}{}\doxysection{lecture\+\_\+csv.\+c File Reference}
+\label{lecture__csv_8c}\index{lecture\_csv.c@{lecture\_csv.c}}
+
+
+Fonctions pour lire des données à partir de fichiers CSV et les stocker dans des structures appropriées.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lecture\+\_\+csv.\+h\char`\"{}}\newline
+Include dependency graph for lecture\+\_\+csv.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lecture__csv_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lecture__csv_8c_a218b623720f8445321a44aa1beca70ea}{lire\+Fichier\+CSV}} (char $\ast$nom\+Fichier, \mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$matrice)
+\begin{DoxyCompactList}\small\item\em Ouvre un fichier CSV et stocke son contenu dans une matrice. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lecture__csv_8c_a3850f89034d4eadc59f9bcea717b0fe9}{lire\+Fichier\+CSV\+\_\+vote}} (const char $\ast$nom\+Fichier, \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$v\+\_\+elect, \mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} $\ast$nb\+\_\+elect)
+\begin{DoxyCompactList}\small\item\em deuxieme lecteur \+:Lit un fichier CSV contenant les votes des électeurs et les stocke dans un tableau de structures \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lecture__csv_8c_a196019dc61ac3132d1b5a1cf7b60d58c}{lire\+Fichier\+CSV\+\_\+electeur}} (const char $\ast$nom\+Fichier, \mbox{\hyperlink{structelecteur}{electeur}} $\ast$$\ast$electeurs, \mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} $\ast$nb\+\_\+elect)
+\begin{DoxyCompactList}\small\item\em Lit un fichier CSV contenant les informations des électeurs et les stocke dans un tableau de structures electeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fonctions pour lire des données à partir de fichiers CSV et les stocker dans des structures appropriées. 
+
+\begin{DoxyDate}{Date}
+19/10/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lecture__csv_8c_a218b623720f8445321a44aa1beca70ea}\label{lecture__csv_8c_a218b623720f8445321a44aa1beca70ea}} 
+\index{lecture\_csv.c@{lecture\_csv.c}!lireFichierCSV@{lireFichierCSV}}
+\index{lireFichierCSV@{lireFichierCSV}!lecture\_csv.c@{lecture\_csv.c}}
+\doxysubsubsection{\texorpdfstring{lireFichierCSV()}{lireFichierCSV()}}
+{\footnotesize\ttfamily void lire\+Fichier\+CSV (\begin{DoxyParamCaption}\item[{char $\ast$}]{nom\+Fichier,  }\item[{\mbox{\hyperlink{structs__mat__char__dyn}{t\+\_\+mat\+\_\+char\+\_\+star\+\_\+dyn}} $\ast$}]{matrice }\end{DoxyParamCaption})}
+
+
+
+Ouvre un fichier CSV et stocke son contenu dans une matrice. 
+
+Cette fonction ouvre un fichier CSV et le stocke dans une matrice.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Nom du fichier CSV à lire. \\
+\hline
+{\em matrice} & Pointeur vers la matrice dans laquelle les données seront stockées.\\
+\hline
+\end{DoxyParams}
+Cette fonction lit chaque ligne du fichier CSV, découpe chaque ligne en éléments séparés par des virgules, et stocke ces éléments dans la matrice fournie. Elle gère également la mémoire et les erreurs d\textquotesingle{}ouverture de fichier. \mbox{\Hypertarget{lecture__csv_8c_a196019dc61ac3132d1b5a1cf7b60d58c}\label{lecture__csv_8c_a196019dc61ac3132d1b5a1cf7b60d58c}} 
+\index{lecture\_csv.c@{lecture\_csv.c}!lireFichierCSV\_electeur@{lireFichierCSV\_electeur}}
+\index{lireFichierCSV\_electeur@{lireFichierCSV\_electeur}!lecture\_csv.c@{lecture\_csv.c}}
+\doxysubsubsection{\texorpdfstring{lireFichierCSV\_electeur()}{lireFichierCSV\_electeur()}}
+{\footnotesize\ttfamily void lire\+Fichier\+CSV\+\_\+electeur (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nom\+Fichier,  }\item[{\mbox{\hyperlink{structelecteur}{electeur}} $\ast$$\ast$}]{electeurs,  }\item[{\mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} $\ast$}]{nb\+\_\+elect }\end{DoxyParamCaption})}
+
+
+
+Lit un fichier CSV contenant les informations des électeurs et les stocke dans un tableau de structures electeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Nom du fichier CSV à lire. \\
+\hline
+{\em electeurs} & Pointeur vers un tableau de structures electeur. \\
+\hline
+{\em nb\+\_\+elect} & Pointeur vers la structure \mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} indiquant le nombre total d\textquotesingle{}électeurs.\\
+\hline
+\end{DoxyParams}
+Cette fonction lit le fichier CSV ligne par ligne, découpe chaque ligne en tokens et remplit le tableau electeurs avec des structures electeur correspondantes. Chaque electeur contient le numéro et la clé de chaque électeur. \mbox{\Hypertarget{lecture__csv_8c_a3850f89034d4eadc59f9bcea717b0fe9}\label{lecture__csv_8c_a3850f89034d4eadc59f9bcea717b0fe9}} 
+\index{lecture\_csv.c@{lecture\_csv.c}!lireFichierCSV\_vote@{lireFichierCSV\_vote}}
+\index{lireFichierCSV\_vote@{lireFichierCSV\_vote}!lecture\_csv.c@{lecture\_csv.c}}
+\doxysubsubsection{\texorpdfstring{lireFichierCSV\_vote()}{lireFichierCSV\_vote()}}
+{\footnotesize\ttfamily void lire\+Fichier\+CSV\+\_\+vote (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nom\+Fichier,  }\item[{\mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} $\ast$$\ast$}]{v\+\_\+elect,  }\item[{\mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} $\ast$}]{nb\+\_\+elect }\end{DoxyParamCaption})}
+
+
+
+deuxieme lecteur \+:Lit un fichier CSV contenant les votes des électeurs et les stocke dans un tableau de structures \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Nom du fichier CSV à lire. \\
+\hline
+{\em v\+\_\+elect} & Pointeur vers un tableau de structures \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}}. \\
+\hline
+{\em nb\+\_\+elect} & Pointeur vers la structure \mbox{\hyperlink{structnbElecteurs}{nb\+Electeurs}} indiquant le nombre total d\textquotesingle{}électeurs.\\
+\hline
+\end{DoxyParams}
+Cette fonction lit le fichier CSV ligne par ligne, découpe chaque ligne en tokens et remplit le tableau v\+\_\+elect avec des structures \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} correspondantes. Chaque \mbox{\hyperlink{structvoteElecteur}{vote\+Electeur}} contient des informations détaillées sur le vote de chaque électeur. 

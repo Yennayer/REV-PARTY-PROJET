@@ -1,0 +1,6 @@
+<map id="elementliste.h" name="elementliste.h">
+<area shape="rect" id="node1" title="Header file defining operations and types for list elements, specifically for &#39;t_arc_p&#39; type elements..." alt="" coords="91,5,207,32"/>
+<area shape="rect" id="node2" href="$condorcet__Schulze_8h_source.html" title=" " alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node3" href="$liste_8c.html" title="Fichier source implémentant les fonctions de manipulation d&#39;une liste statique." alt="" coords="185,155,247,181"/>
+<area shape="rect" id="node4" href="$liste_8h.html" title="Header file defining operations and structures for handling a static list of &#39;Elementliste&#39; type elem..." alt="" coords="118,80,181,107"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="matrice.h" name="matrice.h">
+<area shape="rect" id="node1" title="Fichier d&#39;en&#45;tête contenant les opérations et structures de matrice." alt="" coords="99,6,183,33"/>
+<area shape="rect" id="node2" href="$condorcet_8h_source.html" title=" " alt="" coords="5,155,104,182"/>
+<area shape="rect" id="node4" href="$graph_8h.html" title="Définition des structures et des fonctions pour la manipulation de graphes." alt="" coords="106,81,177,107"/>
+<area shape="rect" id="node7" href="$uninominales_8h_source.html" title=" " alt="" coords="201,81,324,107"/>
+<area shape="rect" id="node3" href="$condorcet__paires_8c.html" title="Implémentation de la méthode Condorcet paires pour des élections." alt="" coords="69,230,213,257"/>
+<area shape="rect" id="node5" href="$condorcet__paires_8h_source.html" title=" " alt="" coords="179,155,325,182"/>
+<area shape="rect" id="node6" href="$condorcet__Schulze_8h_source.html" title=" " alt="" coords="349,155,504,182"/>
+</map>

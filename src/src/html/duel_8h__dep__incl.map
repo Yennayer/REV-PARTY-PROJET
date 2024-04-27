@@ -1,0 +1,6 @@
+<map id="duel.h" name="duel.h">
+<area shape="rect" id="node1" title="Structure Duel header." alt="" coords="133,5,196,32"/>
+<area shape="rect" id="node2" href="$condorcet__paires_8h_source.html" title=" " alt="" coords="5,80,151,107"/>
+<area shape="rect" id="node4" href="$condorcet__Schulze_8h_source.html" title=" " alt="" coords="175,80,330,107"/>
+<area shape="rect" id="node3" href="$condorcet__paires_8c.html" title="Implémentation de la méthode Condorcet paires pour des élections." alt="" coords="6,155,150,181"/>
+</map>

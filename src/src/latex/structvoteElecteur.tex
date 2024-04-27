@@ -1,0 +1,67 @@
+\hypertarget{structvoteElecteur}{}\doxysection{vote\+Electeur Struct Reference}
+\label{structvoteElecteur}\index{voteElecteur@{voteElecteur}}
+
+
+Structure représentant un électeur pour le jugement majoritaire.  
+
+
+
+
+{\ttfamily \#include $<$global.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structvoteElecteur_acf993076cb8ae2c52f1640f05e26bb5b}{votes\+\_\+electeur}} \mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{structvoteElecteur_a242d1ac2d0f78e30662d56c6bd698ca1}{reponse}}
+\item 
+char $\ast$ \mbox{\hyperlink{structvoteElecteur_a4ea4154ef3feec00cfedf92224d3e07c}{date}}
+\item 
+char $\ast$ \mbox{\hyperlink{structvoteElecteur_aa719d74d8a894339010780a97d5077c0}{cours}}
+\item 
+char $\ast$ \mbox{\hyperlink{structvoteElecteur_a20e62bc340845bbe2e24db3855575d82}{hash}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure représentant un électeur pour le jugement majoritaire. 
+
+Cette structure stocke les informations relatives à un électeur, y compris ses votes, une réponse spécifique (si nécessaire), ainsi que des métadonnées comme la date, le cours et un hash pour l\textquotesingle{}identification ou la vérification. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structvoteElecteur_aa719d74d8a894339010780a97d5077c0}\label{structvoteElecteur_aa719d74d8a894339010780a97d5077c0}} 
+\index{voteElecteur@{voteElecteur}!cours@{cours}}
+\index{cours@{cours}!voteElecteur@{voteElecteur}}
+\doxysubsubsection{\texorpdfstring{cours}{cours}}
+{\footnotesize\ttfamily char$\ast$ vote\+Electeur\+::cours}
+
+Informations sur le cours lié au vote. \mbox{\Hypertarget{structvoteElecteur_a4ea4154ef3feec00cfedf92224d3e07c}\label{structvoteElecteur_a4ea4154ef3feec00cfedf92224d3e07c}} 
+\index{voteElecteur@{voteElecteur}!date@{date}}
+\index{date@{date}!voteElecteur@{voteElecteur}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily char$\ast$ vote\+Electeur\+::date}
+
+Date du vote. \mbox{\Hypertarget{structvoteElecteur_a20e62bc340845bbe2e24db3855575d82}\label{structvoteElecteur_a20e62bc340845bbe2e24db3855575d82}} 
+\index{voteElecteur@{voteElecteur}!hash@{hash}}
+\index{hash@{hash}!voteElecteur@{voteElecteur}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily char$\ast$ vote\+Electeur\+::hash}
+
+Hash pour l\textquotesingle{}identification ou la vérification. \mbox{\Hypertarget{structvoteElecteur_a242d1ac2d0f78e30662d56c6bd698ca1}\label{structvoteElecteur_a242d1ac2d0f78e30662d56c6bd698ca1}} 
+\index{voteElecteur@{voteElecteur}!reponse@{reponse}}
+\index{reponse@{reponse}!voteElecteur@{voteElecteur}}
+\doxysubsubsection{\texorpdfstring{reponse}{reponse}}
+{\footnotesize\ttfamily int vote\+Electeur\+::reponse}
+
+Réponse spécifique de l\textquotesingle{}électeur, si nécessaire. \mbox{\Hypertarget{structvoteElecteur_acf993076cb8ae2c52f1640f05e26bb5b}\label{structvoteElecteur_acf993076cb8ae2c52f1640f05e26bb5b}} 
+\index{voteElecteur@{voteElecteur}!votes\_electeur@{votes\_electeur}}
+\index{votes\_electeur@{votes\_electeur}!voteElecteur@{voteElecteur}}
+\doxysubsubsection{\texorpdfstring{votes\_electeur}{votes\_electeur}}
+{\footnotesize\ttfamily int vote\+Electeur\+::votes\+\_\+electeur\mbox{[}10\mbox{]}}
+
+Tableau stockant les votes de l\textquotesingle{}électeur, limité à 10 choix. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{global_8h}{global.\+h}}\end{DoxyCompactItemize}

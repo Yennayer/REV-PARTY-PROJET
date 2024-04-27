@@ -1,0 +1,45 @@
+Nom du candidat n°1: Réponse
+Nom du candidat n°2: Soumis le :
+Nom du candidat n°3: Cours
+Nom du candidat n°4: Nom complet
+Nom du candidat n°5: Q00_Vote->1 - Burger Black Pepper
+Nom du candidat n°6: Q00_Vote->2 - Burger Sud-Ouest
+Nom du candidat n°7: Q00_Vote->3 - Thai Burger
+Nom du candidat n°8: Q00_Vote->4 - Veggie Burger
+Nom du candidat n°9: Q00_Vote->5 - Fire cracker
+Nom du candidat n°10: Q00_Vote->6 - Roma
+
+Voici la matrice de duels:
+0 0 0 2 0 0 0 0 0 0 
+39 0 0 14 6 8 6 13 2 7 
+39 39 0 22 39 39 39 39 38 39 
+37 25 1 0 21 20 21 22 19 22 
+39 30 0 17 0 23 24 25 20 24 
+39 31 0 19 15 0 22 24 19 24 
+39 26 0 15 14 16 0 25 19 19 
+39 24 0 16 14 14 14 0 12 12 
+39 33 1 19 18 19 20 26 0 21 
+39 28 0 15 14 14 20 26 17 0 
+
+Matrice qui contient les duels gagnant:
+0 0 0 0 0 0 0 0 0 0 
+39 0 0 0 0 0 0 0 0 0 
+39 39 0 21 39 39 39 39 37 39 
+35 11 0 0 4 1 6 6 0 7 
+39 24 0 0 0 8 10 11 2 10 
+39 23 0 0 0 0 6 10 0 10 
+39 20 0 0 0 0 0 11 0 0 
+39 11 0 0 0 0 0 0 0 0 
+39 31 0 0 0 0 1 14 0 4 
+39 21 0 0 0 0 1 14 0 0 
+
+
+Liste duels gagnants par ordre décroissant
+39 39 39 39 39 39 39 39 39 37 35 24 21 11 8 7 6 6 4 1 
+
+Liste des votes représentant le graphe sans cycle:
+39 39 39 39 39 39 39 39 39 37 35 24 21 11 8 7 6 6 4 
+
+Liste du nombre d'arcs entrant pour chaque candidats
+4 3 0 1 2 2 2 2 1 2 
+Mode de scrutin : Condorcet Paires, 10 candidats, 10 votants, vainqueur = Cours

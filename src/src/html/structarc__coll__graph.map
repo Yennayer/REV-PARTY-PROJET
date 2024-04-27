@@ -1,0 +1,4 @@
+<map id="arc" name="arc">
+<area shape="rect" id="node1" title="Structure représentant un arc dans le graphe." alt="" coords="22,109,65,136"/>
+<area shape="rect" id="node2" href="$structsommet.html" title="Structure représentant un sommet dans le graphe." alt="" coords="5,5,81,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="init_arc" name="init_arc">
+<area shape="rect" id="node1" title="Initialise les arcs du graphe à partir d&#39;une matrice duel." alt="" coords="5,31,76,57"/>
+<area shape="rect" id="node2" href="$graph_8h.html#a49fa86d7e9cdf1e752dd15516abe4e6f" title="Ajoute un arc au graphe." alt="" coords="129,5,202,32"/>
+<area shape="rect" id="node3" href="$graph_8h.html#a97b0c59dce819bbedfbbdc44f60bae21" title="Crée et renvoie un arc entre les sommets spécifiés avec le poids spécifié." alt="" coords="124,56,207,83"/>
+</map>

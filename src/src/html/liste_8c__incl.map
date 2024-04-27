@@ -1,0 +1,10 @@
+<map id="liste.c" name="liste.c">
+<area shape="rect" id="node1" title="Fichier source implémentant les fonctions de manipulation d&#39;une liste statique." alt="" coords="190,5,251,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,304,76,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="210,304,277,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="301,304,383,331"/>
+<area shape="rect" id="node5" href="$global_8h.html" title="Fichier d&#39;en&#45;tête global contenant les définitions des constantes, des structures et des types utilis..." alt="" coords="118,229,193,256"/>
+<area shape="rect" id="node7" href="$elementliste_8h.html" title="Header file defining operations and types for list elements, specifically for &#39;t_arc_p&#39; type elements..." alt="" coords="120,155,236,181"/>
+<area shape="rect" id="node8" href="$liste_8h.html" title="Header file defining operations and structures for handling a static list of &#39;Elementliste&#39; type elem..." alt="" coords="295,80,357,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="115,304,185,331"/>
+</map>
